@@ -1,0 +1,951 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru" dir="ltr"> 
+<head> 
+<title>Haskell — Википедия</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+<meta http-equiv="Content-Style-Type" content="text/css" /> 
+<meta name="generator" content="MediaWiki 1.16wmf4" /> 
+<link rel="alternate" type="application/x-wiki" title="Править" href="/w/index.php?title=Haskell&amp;action=edit" /> 
+<link rel="edit" title="Править" href="/w/index.php?title=Haskell&amp;action=edit" /> 
+<link rel="apple-touch-icon" href="http://ru.wikipedia.org/apple-touch-icon.png" /> 
+<link rel="shortcut icon" href="/favicon.ico" /> 
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Википедия (ru)" /> 
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/" /> 
+<link rel="alternate" type="application/atom+xml" title="Википедия — Atom-лента" href="/w/index.php?title=%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:RecentChanges&amp;feed=atom" /> 
+<link rel="stylesheet" href="http://bits.wikimedia.org/skins-1.5/common/shared.css?281c" type="text/css" media="screen" /> 
+<link rel="stylesheet" href="http://bits.wikimedia.org/skins-1.5/common/commonPrint.css?281c" type="text/css" media="print" /> 
+<link rel="stylesheet" href="http://bits.wikimedia.org/skins-1.5/monobook/main.css?281c" type="text/css" media="screen" /> 
+<link rel="stylesheet" href="http://bits.wikimedia.org/skins-1.5/chick/main.css?281c" type="text/css" media="handheld" /> 
+<!--[if lt IE 5.5000]><link rel="stylesheet" href="http://bits.wikimedia.org/skins-1.5/monobook/IE50Fixes.css?281c" type="text/css" media="screen" /><![endif]--> 
+<!--[if IE 5.5000]><link rel="stylesheet" href="http://bits.wikimedia.org/skins-1.5/monobook/IE55Fixes.css?281c" type="text/css" media="screen" /><![endif]--> 
+<!--[if IE 6]><link rel="stylesheet" href="http://bits.wikimedia.org/skins-1.5/monobook/IE60Fixes.css?281c" type="text/css" media="screen" /><![endif]--> 
+<!--[if IE 7]><link rel="stylesheet" href="http://bits.wikimedia.org/skins-1.5/monobook/IE70Fixes.css?281c" type="text/css" media="screen" /><![endif]--> 
+<link rel="stylesheet" href="/w/extensions/FlaggedRevs/flaggedrevs.css?60" type="text/css" media="all" /> 
+<link rel="stylesheet" href="/w/index.php?title=MediaWiki:Common.css&amp;usemsgcache=yes&amp;ctype=text%2Fcss&amp;smaxage=2678400&amp;action=raw&amp;maxage=2678400" type="text/css" media="all" /> 
+<link rel="stylesheet" href="/w/index.php?title=MediaWiki:Print.css&amp;usemsgcache=yes&amp;ctype=text%2Fcss&amp;smaxage=2678400&amp;action=raw&amp;maxage=2678400" type="text/css" media="print" /> 
+<link rel="stylesheet" href="/w/index.php?title=MediaWiki:Handheld.css&amp;usemsgcache=yes&amp;ctype=text%2Fcss&amp;smaxage=2678400&amp;action=raw&amp;maxage=2678400" type="text/css" media="handheld" /> 
+<link rel="stylesheet" href="/w/index.php?title=MediaWiki:Monobook.css&amp;usemsgcache=yes&amp;ctype=text%2Fcss&amp;smaxage=2678400&amp;action=raw&amp;maxage=2678400" type="text/css" media="all" /> 
+<link rel="stylesheet" href="/w/index.php?title=-&amp;action=raw&amp;maxage=2678400&amp;gen=css" type="text/css" media="all" /> 
+<script type="text/javascript"> 
+var skin="monobook",
+stylepath="http://bits.wikimedia.org/skins-1.5",
+wgUrlProtocols="http\\:\\/\\/|https\\:\\/\\/|ftp\\:\\/\\/|irc\\:\\/\\/|gopher\\:\\/\\/|telnet\\:\\/\\/|nntp\\:\\/\\/|worldwind\\:\\/\\/|mailto\\:|news\\:|svn\\:\\/\\/",
+wgArticlePath="/wiki/$1",
+wgScriptPath="/w",
+wgScriptExtension=".php",
+wgScript="/w/index.php",
+wgVariantArticlePath=false,
+wgActionPaths={},
+wgServer="http://ru.wikipedia.org",
+wgCanonicalNamespace="",
+wgCanonicalSpecialPageName=false,
+wgNamespaceNumber=0,
+wgPageName="Haskell",
+wgTitle="Haskell",
+wgAction="view",
+wgArticleId=13198,
+wgIsArticle=true,
+wgUserName=null,
+wgUserGroups=null,
+wgUserLanguage="ru",
+wgContentLanguage="ru",
+wgBreakFrames=false,
+wgCurRevisionId=24013151,
+wgVersion="1.16wmf4",
+wgEnableAPI=true,
+wgEnableWriteAPI=true,
+wgSeparatorTransformTable=[",	.", " 	,"],
+wgDigitTransformTable=["", ""],
+wgMainPageTitle="Заглавная страница",
+wgFormattedNamespaces={"-2": "Медиа", "-1": "Служебная", "0": "", "1": "Обсуждение", "2": "Участник", "3": "Обсуждение участника", "4": "Википедия", "5": "Обсуждение Википедии", "6": "Файл", "7": "Обсуждение файла", "8": "MediaWiki", "9": "Обсуждение MediaWiki", "10": "Шаблон", "11": "Обсуждение шаблона", "12": "Справка", "13": "Обсуждение справки", "14": "Категория", "15": "Обсуждение категории", "100": "Портал", "101": "Обсуждение портала"},
+wgNamespaceIds={"медиа": -2, "служебная": -1, "": 0, "обсуждение": 1, "участник": 2, "обсуждение_участника": 3, "википедия": 4, "обсуждение_википедии": 5, "файл": 6, "обсуждение_файла": 7, "mediawiki": 8, "обсуждение_mediawiki": 9, "шаблон": 10, "обсуждение_шаблона": 11, "справка": 12, "обсуждение_справки": 13, "категория": 14, "обсуждение_категории": 15, "портал": 100, "обсуждение_портала": 101, "участница": 2, "обсуждение участницы": 3, "изображение": 6, "обсуждение_изображения": 7, "обсуждение_участницы": 3, "вп": 4, "image": 6, "image_talk": 7},
+wgSiteName="Википедия",
+wgCategories=["Появились в 1990 году", "Языки программирования по алфавиту", "Википедия:Статьи без сносок", "Haskell", "Функциональные языки программирования"],
+wgMWSuggestTemplate="http://ru.wikipedia.org/w/api.php?action=opensearch\x26search={searchTerms}\x26namespace={namespaces}\x26suggest",
+wgDBname="ruwiki",
+wgSearchNamespaces=[0],
+wgMWSuggestMessages=["с советами", "без советов"],
+wgRestrictionEdit=[],
+wgRestrictionMove=[],
+wgFlaggedRevsParams={"tags": {"accuracy": 2}},
+wgStableRevisionId=24013151,
+wgAjaxReview={"sendingMsg": "Отправка…", "sentMsgOk": "Проверка выполнена!", "sentMsgBad": "Ошибка проверки!", "actioncomplete": "Действие выполнено", "actionfailed": "Действие не выполнено"},
+wgNotice="",
+wgNoticeLocal="";
+</script><script src="http://bits.wikimedia.org/skins-1.5/common/wikibits.js?281c" type="text/javascript"></script> 
+<script src="http://bits.wikimedia.org/skins-1.5/common/ajax.js?281c" type="text/javascript"></script> 
+<script src="http://bits.wikimedia.org/skins-1.5/common/mwsuggest.js?281c" type="text/javascript"></script> 
+<script type="text/javascript" src="http://upload.wikimedia.org/centralnotice/wikipedia/ru/centralnotice.js?281c"></script> 
+ 
+<script src="/w/index.php?title=-&amp;action=raw&amp;gen=js&amp;useskin=monobook&amp;281c" type="text/javascript"></script> 
+ 
+<style type="text/css">/*<![CDATA[*/
+.source-haskell {line-height: normal;}
+.source-haskell li, .source-haskell pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for haskell
+ * CSS class: source-haskell, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.haskell.source-haskell .de1, .haskell.source-haskell .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;}
+.haskell.source-haskell  {font-family:monospace;}
+.haskell.source-haskell .imp {font-weight: bold; color: red;}
+.haskell.source-haskell li, .haskell.source-haskell .li1 {font-weight: normal; vertical-align:top;}
+.haskell.source-haskell .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.haskell.source-haskell .li2 {font-weight: bold; vertical-align:top;}
+.haskell.source-haskell .kw1 {color: #06c; font-weight: bold;}
+.haskell.source-haskell .kw2 {color: #06c; font-weight: bold;}
+.haskell.source-haskell .kw3 {font-weight: bold;}
+.haskell.source-haskell .kw4 {color: #cccc00; font-weight: bold;}
+.haskell.source-haskell .kw5 {color: maroon;}
+.haskell.source-haskell .co1 {color: #5d478b; font-style: italic;}
+.haskell.source-haskell .co2 {color: #339933; font-weight: bold;}
+.haskell.source-haskell .coMULTI {color: #5d478b; font-style: italic;}
+.haskell.source-haskell .es0 {background-color: #3cb371; font-weight: bold;}
+.haskell.source-haskell .br0 {color: green;}
+.haskell.source-haskell .sy0 {color: #339933; font-weight: bold;}
+.haskell.source-haskell .st0 {background-color: #3cb371;}
+.haskell.source-haskell .nu0 {color: red;}
+.haskell.source-haskell .me1 {color: #060;}
+.haskell.source-haskell .ln-xtra, .haskell.source-haskell li.ln-xtra, .haskell.source-haskell div.ln-xtra {background-color: #ffc;}
+.haskell.source-haskell span.xtra { display:block; }
+ 
+/*]]>*/
+</style> 
+<style type="text/css">/*<![CDATA[*/
+@import "/w/index.php?title=MediaWiki:Geshi.css&usemsgcache=yes&action=raw&ctype=text/css&smaxage=2678400";
+/*]]>*/
+</style><script type="text/javascript" src="/w/extensions/FlaggedRevs/flaggedrevs.js?60"></script></head> 
+<body class="mediawiki ltr ns-0 ns-subject page-Haskell skin-monobook"> 
+<div id="globalWrapper"> 
+<div id="column-content"><div id="content"> 
+	<a id="top"></a> 
+	<div id="siteNotice"><script type='text/javascript'>if (wgNotice != '') document.writeln(wgNotice);</script></div> 
+	<h1 id="firstHeading" class="firstHeading">Haskell</h1> 
+	<div id="bodyContent"> 
+		<h3 id="siteSub">Материал из Википедии — свободной энциклопедии</h3> 
+		<div id="contentSub"></div> 
+		<div id="jump-to-nav">Перейти к: <a href="#column-one">навигация</a>, <a href="#searchInput">поиск</a></div> 
+		<!-- start content --> 
+<table class="infobox" cellspacing="2" style="width: 22em; text-align: left; font-size: 88%; line-height: 1.5em; width: 23em;"> 
+<caption class="" style="font-size: 125%; font-weight: bold;">Haskell</caption> 
+<tr> 
+<td colspan="2" class="" style="text-align:center;"><a href="/wiki/%D0%A4%D0%B0%D0%B9%D0%BB:Haskell-Logo-Variation.png" class="image" title="Логотип Haskell"><img alt="Логотип Haskell" src="http://upload.wikimedia.org/wikipedia/commons/4/43/Haskell-Logo-Variation.png" width="128" height="128" /></a></td> 
+</tr> 
+<tr> 
+<th style="padding:3px">Класс языка:</th> 
+<td class="" style="padding:3px"> 
+<p><a href="/wiki/%D0%A4%D1%83%D0%BD%D0%BA%D1%86%D0%B8%D0%BE%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5" title="Функциональное программирование">функциональный</a>, <a href="/wiki/%D0%9E%D1%82%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5_%D0%B2%D1%8B%D1%87%D0%B8%D1%81%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F" title="Отложенные вычисления">ленивый</a>, <a href="/wiki/%D0%9C%D0%BE%D0%B4%D1%83%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D1%8C_(%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5)" title="Модульность (программирование)">модульный</a></p> 
+</td> 
+</tr> 
+<tr> 
+<th style="padding:3px">Тип исполнения:</th> 
+<td class="" style="padding:3px"> 
+<p><a href="/wiki/%D0%9A%D0%BE%D0%BC%D0%BF%D0%B8%D0%BB%D1%8F%D1%82%D0%BE%D1%80" title="Компилятор">компилируемый</a>, <a href="/wiki/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BF%D1%80%D0%B5%D1%82%D0%B0%D1%82%D0%BE%D1%80" title="Интерпретатор">интерпретируемый</a></p> 
+</td> 
+</tr> 
+<tr> 
+<th style="padding:3px">Появился в:</th> 
+<td class="" style="padding:3px"> 
+<p><a href="/wiki/1990" title="1990" class="mw-redirect">1990</a> г.</p> 
+</td> 
+</tr> 
+<tr> 
+<th style="padding:3px"><a href="/wiki/%D0%A2%D0%B8%D0%BF_%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85" title="Тип данных" class="mw-redirect">Типизация данных</a>:</th> 
+<td class="" style="padding:3px"> 
+<p><a href="/wiki/%D0%A1%D1%82%D0%B0%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B0%D1%8F_%D1%82%D0%B8%D0%BF%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F" title="Статическая типизация">статическая</a>, <a href="/wiki/%D0%A1%D1%82%D1%80%D0%BE%D0%B3%D0%B0%D1%8F_%D1%82%D0%B8%D0%BF%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F" title="Строгая типизация">строгая</a>, <a href="/wiki/%D0%92%D1%8B%D0%B2%D0%BE%D0%B4_%D1%82%D0%B8%D0%BF%D0%BE%D0%B2" title="Вывод типов">с&#160;выводом типов</a></p> 
+</td> 
+</tr> 
+<tr> 
+<th style="padding:3px">Основные реализации:</th> 
+<td class="" style="padding:3px"> 
+<p><span style="white-space: nowrap;"><a href="/wiki/Glasgow_Haskell_Compiler" title="Glasgow Haskell Compiler">GHC</a></span>, <a href="/wiki/HUGS" title="HUGS">HUGS</a>, <span style="white-space: nowrap;"><a href="/wiki/Another_Haskell_Compiler" title="Another Haskell Compiler">NHC</a></span>, <span style="white-space: nowrap;"><a href="/w/index.php?title=York_Haskell_Compiler&amp;action=edit&amp;redlink=1" class="new" title="York Haskell Compiler (страница отсутствует)">YHC</a></span></p> 
+</td> 
+</tr> 
+<tr> 
+<th style="padding:3px">Диалекты:</th> 
+<td class="" style="padding:3px"> 
+<p>Helium, <a href="/wiki/Gofer" title="Gofer">Gofer</a>, O'Haskell, Haskell++, Mondrian, Disciple</p> 
+</td> 
+</tr> 
+<tr> 
+<th style="padding:3px">Испытал влияние:</th> 
+<td class="" style="padding:3px"> 
+<p><a href="/wiki/Lisp" title="Lisp" class="mw-redirect">Lisp</a> и <a href="/wiki/Scheme_(%D1%8F%D0%B7%D1%8B%D0%BA_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F)" title="Scheme (язык программирования)" class="mw-redirect">Scheme</a>, <a href="/wiki/ISWIM" title="ISWIM">ISWIM</a>, <a href="http://en.wikipedia.org/wiki/FP_(programming_language)" class="extiw" title="en:FP (programming language)">FP</a>, <a href="/wiki/%D0%90%D0%9F%D0%9B_(%D1%8F%D0%B7%D1%8B%D0%BA_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F)" title="АПЛ (язык программирования)">АПЛ</a>, <a href="/wiki/Hope_(%D1%8F%D0%B7%D1%8B%D0%BA_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F)" title="Hope (язык программирования)">Hope и Hope+</a>, <a href="http://en.wikipedia.org/wiki/SISAL" class="extiw" title="en:SISAL">SISAL</a>, <a href="/wiki/%D0%9C%D0%B8%D1%80%D0%B0%D0%BD%D0%B4%D0%B0_(%D1%8F%D0%B7%D1%8B%D0%BA_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F)" title="Миранда (язык программирования)">Miranda</a>, <a href="/wiki/ML" title="ML">ML</a> и <a href="/wiki/Standard_ML" title="Standard ML" class="mw-redirect">Standard ML</a>, <a href="http://en.wikipedia.org/wiki/Lazy_ML" class="extiw" title="en:Lazy ML">Lazy ML</a>, <a href="http://en.wikipedia.org/wiki/Orwell_(programming_language)" class="extiw" title="en:Orwell (programming language)">Orwell</a>, <a href="http://en.wikipedia.org/wiki/Id_(programming_language)" class="extiw" title="en:Id (programming language)">Id</a></p> 
+</td> 
+</tr> 
+<tr> 
+<th style="padding:3px">Повлиял на:</th> 
+<td class="" style="padding:3px"> 
+<p><a href="http://en.wikipedia.org/wiki/Agda_(theorem_prover)" class="extiw" title="en:Agda (theorem prover)">Agda</a>, <a href="http://en.wikipedia.org/wiki/Bluespec,_Inc." class="extiw" title="en:Bluespec, Inc.">Bluespec</a>, <a href="/wiki/Clojure" title="Clojure">Clojure</a>, <a href="/wiki/C_Sharp" title="C Sharp">C#</a>, <a href="http://en.wikipedia.org/wiki/Quark_Framework" class="extiw" title="en:Quark Framework">CAL</a>, <a href="http://en.wikipedia.org/wiki/Cat_(programming_language)" class="extiw" title="en:Cat (programming language)">Cat</a>, <a href="http://en.wikipedia.org/wiki/Cayenne_(programming_language)" class="extiw" title="en:Cayenne (programming language)">Cayenne</a>, <a href="/wiki/Clean" title="Clean">Clean</a>, <a href="/wiki/Curry" title="Curry">Curry</a>, <a href="http://en.wikipedia.org/wiki/Epigram_(programming_language)" class="extiw" title="en:Epigram (programming language)">Epigram</a>, <a href="http://en.wikipedia.org/wiki/Escher_(programming_language)" class="extiw" title="en:Escher (programming language)">Escher</a>, <a href="/wiki/F_Sharp" title="F Sharp">F#</a>, <a href="/wiki/Factor_(%D1%8F%D0%B7%D1%8B%D0%BA_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F)" title="Factor (язык программирования)">Factor</a>, <a href="http://en.wikipedia.org/wiki/Isabelle_theorem_prover" class="extiw" title="en:Isabelle theorem prover">Isabelle</a>, <a href="/wiki/%D0%9E%D0%B1%D0%BE%D0%B1%D1%89%D1%91%D0%BD%D0%BD%D0%BE%D0%B5_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5#Java" title="Обобщённое программирование">Java Generics</a>, <a href="/wiki/LINQ" title="LINQ" class="mw-redirect">LINQ</a>, <a href="/wiki/Mercury_(%D1%8F%D0%B7%D1%8B%D0%BA_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F)" title="Mercury (язык программирования)">Mercury</a>, <a href="http://en.wikipedia.org/wiki/%CE%A9mega_interpreter" class="extiw" title="en:Ωmega interpreter">Omega</a>, <a href="/wiki/Perl_6" title="Perl 6">Perl 6</a>, <a href="/wiki/Python_(%D1%8F%D0%B7%D1%8B%D0%BA_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F)" title="Python (язык программирования)" class="mw-redirect">Python</a>, <a href="http://en.wikipedia.org/wiki/Qi_(programming_language)" class="extiw" title="en:Qi (programming language)">Qi</a>, <a href="/wiki/Scala_(%D1%8F%D0%B7%D1%8B%D0%BA_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F)" title="Scala (язык программирования)">Scala</a>, <a href="http://en.wikipedia.org/wiki/Timber_(programming_language)" class="extiw" title="en:Timber (programming language)">Timber</a>, <a href="/wiki/Visual_Basic_.NET" title="Visual Basic .NET">Visual Basic 9.0</a></p> 
+</td> 
+</tr> 
+<tr> 
+<th style="padding:3px">Сайт:</th> 
+<td class="" style="padding:3px"> 
+<p><a href="http://haskell.org" class="external text" rel="nofollow">haskell.org</a></p> 
+</td> 
+</tr> 
+</table> 
+<p><b>Háskell</b> (<a href="/wiki/%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B9_%D1%8F%D0%B7%D1%8B%D0%BA" title="Русский язык">русск.</a> <i><span lang="ru" xml:lang="ru">Ха́скель, Ха́скелл</span></i>) — стандартизованный <a href="/wiki/%D0%A4%D1%83%D0%BD%D0%BA%D1%86%D0%B8%D0%BE%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5" title="Функциональное программирование">чистый функциональный</a> <a href="/wiki/%D0%AF%D0%B7%D1%8B%D0%BA_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F" title="Язык программирования">язык программирования</a> общего назначения. Является одним из самых распространённых языков программирования с поддержкой <a href="/wiki/%D0%9E%D1%82%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5_%D0%B2%D1%8B%D1%87%D0%B8%D1%81%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F" title="Отложенные вычисления">отложенных вычислений</a>. Типизация в Хаскеле <a href="/wiki/%D0%A1%D1%82%D1%80%D0%BE%D0%B3%D0%B0%D1%8F_%D1%82%D0%B8%D0%BF%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F" title="Строгая типизация">строгая</a>, <a href="/wiki/%D0%A1%D1%82%D0%B0%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B0%D1%8F_%D1%82%D0%B8%D0%BF%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F" title="Статическая типизация">статическая</a>, с автоматическим <a href="/wiki/%D0%92%D1%8B%D0%B2%D0%BE%D0%B4_%D1%82%D0%B8%D0%BF%D0%BE%D0%B2" title="Вывод типов">выводом типов</a>. Поскольку язык функциональный, то основная управляющая структура — это <a href="/wiki/%D0%A4%D1%83%D0%BD%D0%BA%D1%86%D0%B8%D1%8F_(%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5)" title="Функция (программирование)">функция</a>. Серьёзное отношение к типизации — ещё одна отличительная черта Хаскеля. Концепция языка отражает идею математика <a href="/wiki/%D0%9A%D0%B0%D1%80%D1%80%D0%B8,_%D0%A5%D0%B0%D1%81%D0%BA%D0%B5%D0%BB%D0%BB" title="Карри, Хаскелл">Хаскелла Карри</a>, писавшему, что «доказательство — это программа, а доказываемая формула — это тип программы»<sup id="cite_ref-0" class="reference"><a href="#cite_note-0">[1]</a></sup><sup id="cite_ref-1" class="reference"><a href="#cite_note-1">[2]</a></sup>. Именно в честь <span style="white-space: nowrap;">Х. Карри</span> язык и получил своё название.</p> 
+<p>Сегодня Хаскель стал языком быстрой разработки надёжных, кратких и корректных программ. Имеются средства <a href="/wiki/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BE%D0%BF%D0%B5%D1%80%D0%B0%D0%B1%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D1%8C" title="Интероперабельность">взаимодействия</a> с кодом на других языках программирования. Есть встроенная поддержка <a href="/wiki/%D0%9C%D0%BD%D0%BE%D0%B3%D0%BE%D0%BF%D0%BE%D1%82%D0%BE%D1%87%D0%BD%D0%BE%D1%81%D1%82%D1%8C" title="Многопоточность">многозадачного</a> и <a href="/wiki/%D0%9F%D0%B0%D1%80%D0%B0%D0%BB%D0%BB%D0%B5%D0%BB%D1%8C%D0%BD%D1%8B%D0%B5_%D0%B2%D1%8B%D1%87%D0%B8%D1%81%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F" title="Параллельные вычисления" class="mw-redirect">параллельного</a> программирования, развитый инструментарий (средства автоматического <a href="/wiki/%D0%A2%D0%B5%D1%81%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%BD%D0%BE%D0%B3%D0%BE_%D0%BE%D0%B1%D0%B5%D1%81%D0%BF%D0%B5%D1%87%D0%B5%D0%BD%D0%B8%D1%8F" title="Тестирование программного обеспечения">тестирования</a>, <a href="/wiki/%D0%9E%D1%82%D0%BB%D0%B0%D0%B4%D0%BA%D0%B0" title="Отладка" class="mw-redirect">отладки</a> и <a href="/wiki/%D0%9F%D1%80%D0%BE%D1%84%D0%B8%D0%BB%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5_(%D0%B8%D0%BD%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%82%D0%B8%D0%BA%D0%B0)" title="Профилирование (информатика)">профилирования</a>, в том числе для параллельных программ), существует много библиотек <a href="/wiki/%D0%9E%D1%82%D0%BA%D1%80%D1%8B%D1%82%D0%BE%D0%B5_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%BD%D0%BE%D0%B5_%D0%BE%D0%B1%D0%B5%D1%81%D0%BF%D0%B5%D1%87%D0%B5%D0%BD%D0%B8%D0%B5" title="Открытое программное обеспечение">с открытым исходным кодом</a> (более 1800 пакетов в одном только архиве Hackage)<sup id="cite_ref-2" class="reference"><a href="#cite_note-2">[3]</a></sup>.</p> 
+<table id="toc" class="toc"> 
+<tr> 
+<td> 
+<div id="toctitle"> 
+<h2>Содержание</h2> 
+</div> 
+<ul> 
+<li class="toclevel-1 tocsection-1"><a href="#.D0.98.D1.81.D1.82.D0.BE.D1.80.D0.B8.D1.8F"><span class="tocnumber">1</span> <span class="toctext">История</span></a></li> 
+<li class="toclevel-1 tocsection-2"><a href="#.D0.A5.D0.B0.D1.80.D0.B0.D0.BA.D1.82.D0.B5.D1.80.D0.B8.D1.81.D1.82.D0.B8.D0.BA.D0.B8_.D1.8F.D0.B7.D1.8B.D0.BA.D0.B0"><span class="tocnumber">2</span> <span class="toctext">Характеристики языка</span></a></li> 
+<li class="toclevel-1 tocsection-3"><a href="#.D0.A0.D0.B5.D0.B0.D0.BB.D0.B8.D0.B7.D0.B0.D1.86.D0.B8.D0.B8_.D1.8F.D0.B7.D1.8B.D0.BA.D0.B0"><span class="tocnumber">3</span> <span class="toctext">Реализации языка</span></a> 
+<ul> 
+<li class="toclevel-2 tocsection-4"><a href="#.D0.9A.D0.BE.D0.BC.D0.BF.D0.B8.D0.BB.D1.8F.D1.82.D0.BE.D1.80.D1.8B_.D0.B8_.D0.B8.D0.BD.D1.82.D0.B5.D1.80.D0.BF.D1.80.D0.B5.D1.82.D0.B0.D1.82.D0.BE.D1.80.D1.8B"><span class="tocnumber">3.1</span> <span class="toctext">Компиляторы и интерпретаторы</span></a></li> 
+<li class="toclevel-2 tocsection-5"><a href="#Haskell_Platform"><span class="tocnumber">3.2</span> <span class="toctext">Haskell Platform</span></a></li> 
+<li class="toclevel-2 tocsection-6"><a href="#.D0.90.D0.BB.D1.8C.D1.82.D0.B5.D1.80.D0.BD.D0.B0.D1.82.D0.B8.D0.B2.D0.BD.D1.8B.D0.B5_.D1.86.D0.B5.D0.BB.D0.B5.D0.B2.D1.8B.D0.B5_.D0.BF.D0.BB.D0.B0.D1.82.D1.84.D0.BE.D1.80.D0.BC.D1.8B"><span class="tocnumber">3.3</span> <span class="toctext">Альтернативные целевые платформы</span></a></li> 
+<li class="toclevel-2 tocsection-7"><a href="#.D0.A0.D0.B0.D1.81.D1.88.D0.B8.D1.80.D0.B5.D0.BD.D0.B8.D1.8F_.D1.8F.D0.B7.D1.8B.D0.BA.D0.B0"><span class="tocnumber">3.4</span> <span class="toctext">Расширения языка</span></a></li> 
+</ul> 
+</li> 
+<li class="toclevel-1 tocsection-8"><a href="#.D0.9F.D1.80.D0.B8.D0.BC.D0.B5.D1.80.D1.8B"><span class="tocnumber">4</span> <span class="toctext">Примеры</span></a> 
+<ul> 
+<li class="toclevel-2 tocsection-9"><a href="#.D0.92.D1.8B.D1.87.D0.B8.D1.81.D0.BB.D0.B5.D0.BD.D0.B8.D0.B5_.D1.84.D0.B0.D0.BA.D1.82.D0.BE.D1.80.D0.B8.D0.B0.D0.BB.D0.B0"><span class="tocnumber">4.1</span> <span class="toctext">Вычисление факториала</span></a></li> 
+<li class="toclevel-2 tocsection-10"><a href="#.D0.9A.D0.B0.D0.BB.D1.8C.D0.BA.D1.83.D0.BB.D1.8F.D1.82.D0.BE.D1.80"><span class="tocnumber">4.2</span> <span class="toctext">Калькулятор</span></a></li> 
+<li class="toclevel-2 tocsection-11"><a href="#.D0.A7.D0.B8.D1.81.D0.BB.D0.B0_.D0.A4.D0.B8.D0.B1.D0.BE.D0.BD.D0.B0.D1.87.D1.87.D0.B8"><span class="tocnumber">4.3</span> <span class="toctext">Числа Фибоначчи</span></a></li> 
+<li class="toclevel-2 tocsection-12"><a href="#.D0.9F.D1.80.D0.BE.D1.81.D1.82.D1.8B.D0.B5_.D1.87.D0.B8.D1.81.D0.BB.D0.B0"><span class="tocnumber">4.4</span> <span class="toctext">Простые числа</span></a></li> 
+<li class="toclevel-2 tocsection-13"><a href="#.D0.9E.D0.BF.D0.B8.D1.81.D0.B0.D0.BD.D0.B8.D0.B5_.D0.B8.D0.B3.D1.80.D0.B0.D0.BB.D1.8C.D0.BD.D1.8B.D1.85_.D0.BA.D0.B0.D1.80.D1.82"><span class="tocnumber">4.5</span> <span class="toctext">Описание игральных карт</span></a></li> 
+<li class="toclevel-2 tocsection-14"><a href="#.D0.A7.D0.B8.D1.81.D0.BB.D0.B5.D0.BD.D0.BD.D0.BE.D0.B5_.D0.B8.D0.BD.D1.82.D0.B5.D0.B3.D1.80.D0.B8.D1.80.D0.BE.D0.B2.D0.B0.D0.BD.D0.B8.D0.B5"><span class="tocnumber">4.6</span> <span class="toctext">Численное интегрирование</span></a></li> 
+<li class="toclevel-2 tocsection-15"><a href="#.D0.9F.D1.80.D0.BE.D0.B2.D0.B5.D1.80.D0.BA.D0.B0_.D0.BF.D0.B0.D0.BB.D0.B8.D0.BD.D0.B4.D1.80.D0.BE.D0.BC.D0.BE.D0.B2"><span class="tocnumber">4.7</span> <span class="toctext">Проверка палиндромов</span></a></li> 
+</ul> 
+</li> 
+<li class="toclevel-1 tocsection-16"><a href="#.D0.9F.D1.80.D0.B8.D0.BB.D0.BE.D0.B6.D0.B5.D0.BD.D0.B8.D1.8F.2C_.D0.BD.D0.B0.D0.BF.D0.B8.D1.81.D0.B0.D0.BD.D0.BD.D1.8B.D0.B5_.D0.BD.D0.B0_.D1.8F.D0.B7.D1.8B.D0.BA.D0.B5_Haskell"><span class="tocnumber">5</span> <span class="toctext">Приложения, написанные на языке Haskell</span></a> 
+<ul> 
+<li class="toclevel-2 tocsection-17"><a href="#.D0.9F.D1.80.D0.BE.D0.BF.D1.80.D0.B8.D0.B5.D1.82.D0.B0.D1.80.D0.BD.D1.8B.D0.B5_.D0.BF.D1.80.D0.B8.D0.BB.D0.BE.D0.B6.D0.B5.D0.BD.D0.B8.D1.8F"><span class="tocnumber">5.1</span> <span class="toctext">Проприетарные приложения</span></a></li> 
+<li class="toclevel-2 tocsection-18"><a href="#.D0.9F.D1.80.D0.B8.D0.BB.D0.BE.D0.B6.D0.B5.D0.BD.D0.B8.D1.8F_.D1.81_.D0.BE.D1.82.D0.BA.D1.80.D1.8B.D1.82.D1.8B.D0.BC_.D0.B8.D1.81.D1.85.D0.BE.D0.B4.D0.BD.D1.8B.D0.BC_.D0.BA.D0.BE.D0.B4.D0.BE.D0.BC"><span class="tocnumber">5.2</span> <span class="toctext">Приложения с открытым исходным кодом</span></a> 
+<ul> 
+<li class="toclevel-3 tocsection-19"><a href="#.D0.91.D0.B0.D0.B7.D1.8B_.D0.B4.D0.B0.D0.BD.D0.BD.D1.8B.D1.85"><span class="tocnumber">5.2.1</span> <span class="toctext">Базы данных</span></a></li> 
+<li class="toclevel-3 tocsection-20"><a href="#.D0.93.D1.80.D0.B0.D1.84.D0.B8.D0.BA.D0.B0"><span class="tocnumber">5.2.2</span> <span class="toctext">Графика</span></a></li> 
+<li class="toclevel-3 tocsection-21"><a href="#.D0.93.D1.80.D0.B0.D1.84.D0.B8.D1.87.D0.B5.D1.81.D0.BA.D0.B8.D0.B5_.D0.B8.D0.BD.D1.82.D0.B5.D1.80.D1.84.D0.B5.D0.B9.D1.81.D1.8B"><span class="tocnumber">5.2.3</span> <span class="toctext">Графические интерфейсы</span></a></li> 
+<li class="toclevel-3 tocsection-22"><a href="#.D0.98.D0.B3.D1.80.D1.8B"><span class="tocnumber">5.2.4</span> <span class="toctext">Игры</span></a></li> 
+<li class="toclevel-3 tocsection-23"><a href="#.D0.98.D0.BD.D1.82.D0.B5.D1.80.D0.BD.D0.B5.D1.82"><span class="tocnumber">5.2.5</span> <span class="toctext">Интернет</span></a></li> 
+<li class="toclevel-3 tocsection-24"><a href="#.D0.9E.D0.B1.D1.80.D0.B0.D0.B1.D0.BE.D1.82.D0.BA.D0.B0_.D1.82.D0.B5.D0.BA.D1.81.D1.82.D0.B0"><span class="tocnumber">5.2.6</span> <span class="toctext">Обработка текста</span></a></li> 
+<li class="toclevel-3 tocsection-25"><a href="#.D0.9F.D0.B0.D1.80.D0.B0.D0.BB.D0.BB.D0.B5.D0.BB.D1.8C.D0.BD.D0.BE.D0.B5.2C_.D0.BC.D0.BD.D0.BE.D0.B3.D0.BE.D0.B7.D0.B0.D0.B4.D0.B0.D1.87.D0.BD.D0.BE.D0.B5_.D0.B8_.D0.BC.D0.BD.D0.BE.D0.B3.D0.BE.D0.BF.D0.BE.D1.82.D0.BE.D1.87.D0.BD.D0.BE.D0.B5_.D0.BF.D1.80.D0.BE.D0.B3.D1.80.D0.B0.D0.BC.D0.BC.D0.B8.D1.80.D0.BE.D0.B2.D0.B0.D0.BD.D0.B8.D0.B5"><span class="tocnumber">5.2.7</span> <span class="toctext">Параллельное, многозадачное и многопоточное программирование</span></a></li> 
+<li class="toclevel-3 tocsection-26"><a href="#.D0.A0.D0.B0.D0.B7.D1.80.D0.B0.D0.B1.D0.BE.D1.82.D0.BA.D0.B0"><span class="tocnumber">5.2.8</span> <span class="toctext">Разработка</span></a></li> 
+<li class="toclevel-3 tocsection-27"><a href="#.D0.A1.D0.B8.D1.81.D1.82.D0.B5.D0.BC.D0.BD.D1.8B.D0.B5_.D0.BF.D1.80.D0.BE.D0.B3.D1.80.D0.B0.D0.BC.D0.BC.D1.8B"><span class="tocnumber">5.2.9</span> <span class="toctext">Системные программы</span></a></li> 
+<li class="toclevel-3 tocsection-28"><a href="#.D0.AF.D0.B7.D1.8B.D0.BA.D0.B8_.D0.B8_.D0.BA.D0.BE.D0.BC.D0.BF.D0.B8.D0.BB.D1.8F.D1.82.D0.BE.D1.80.D1.8B"><span class="tocnumber">5.2.10</span> <span class="toctext">Языки и компиляторы</span></a></li> 
+</ul> 
+</li> 
+</ul> 
+</li> 
+<li class="toclevel-1 tocsection-29"><a href="#.D0.A1.D0.BC._.D1.82.D0.B0.D0.BA.D0.B6.D0.B5"><span class="tocnumber">6</span> <span class="toctext">См. также</span></a></li> 
+<li class="toclevel-1 tocsection-30"><a href="#.D0.9F.D1.80.D0.B8.D0.BC.D0.B5.D1.87.D0.B0.D0.BD.D0.B8.D1.8F"><span class="tocnumber">7</span> <span class="toctext">Примечания</span></a></li> 
+<li class="toclevel-1 tocsection-31"><a href="#.D0.9B.D0.B8.D1.82.D0.B5.D1.80.D0.B0.D1.82.D1.83.D1.80.D0.B0"><span class="tocnumber">8</span> <span class="toctext">Литература</span></a></li> 
+<li class="toclevel-1 tocsection-32"><a href="#.D0.A1.D1.81.D1.8B.D0.BB.D0.BA.D0.B8"><span class="tocnumber">9</span> <span class="toctext">Ссылки</span></a></li> 
+</ul> 
+</td> 
+</tr> 
+</table> 
+<script type="text/javascript"> 
+//<![CDATA[
+if (window.showTocToggle) { var tocShowText = "показать"; var tocHideText = "убрать"; showTocToggle(); } 
+//]]>
+</script> 
+<h2><span class="editsection">[<a href="/w/index.php?title=Haskell&amp;action=edit&amp;section=1" title="Править секцию: История">править</a>]</span> <span class="mw-headline" id=".D0.98.D1.81.D1.82.D0.BE.D1.80.D0.B8.D1.8F">История</span></h2> 
+<p>Хаскель принадлежит к семейству языков <a href="/wiki/ML" title="ML">ML</a>. Непосредственно на него оказал большое влияние язык <a href="/wiki/%D0%9C%D0%B8%D1%80%D0%B0%D0%BD%D0%B4%D0%B0_(%D1%8F%D0%B7%D1%8B%D0%BA_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F)" title="Миранда (язык программирования)">Miranda</a>, разработанный в 1985&#160;г. <a href="/wiki/%D0%A2%D1%91%D1%80%D0%BD%D0%B5%D1%80,_%D0%94%D1%8D%D0%B2%D0%B8%D0%B4" title="Тёрнер, Дэвид">Дэвидом Тёрнером</a>. Миранда была первым чистым функциональным языком, имевшем коммерческую поддержку, и была относительно популярна в 1980-х годах, но оставалась <a href="/wiki/%D0%9F%D1%80%D0%BE%D0%BF%D1%80%D0%B8%D0%B5%D1%82%D0%B0%D1%80%D0%BD%D0%BE%D0%B5_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%BD%D0%BE%D0%B5_%D0%BE%D0%B1%D0%B5%D1%81%D0%BF%D0%B5%D1%87%D0%B5%D0%BD%D0%B8%D0%B5" title="Проприетарное программное обеспечение">несвободным программным обеспечением</a>. Это затрудняло развитие и исследования возможностей ленивого функционального программирования, поэтому буквально за пару лет появилось более десятка схожих языков. Чтобы объединить усилия разных разработчиков, в 1987 г. на конференции по функциональным языкам программирования и компьютерной архитектуре в Орегоне (FPCA’87) было решено создать комитет для разработки <a href="/wiki/%D0%9E%D1%82%D0%BA%D1%80%D1%8B%D1%82%D1%8B%D0%B9_%D1%81%D1%82%D0%B0%D0%BD%D0%B4%D0%B0%D1%80%D1%82" title="Открытый стандарт">открытого стандарта</a>.</p> 
+<p>В 1990 г. была предложена первая версия языка, Haskell 1.0. В дальнейшем работа комитета продолжилась, и в 1999 г. был опубликован «The Haskell 98 Report<sup id="cite_ref-3" class="reference"><a href="#cite_note-3">[4]</a></sup>», который стал стабильным стандартом языка на много лет. Язык, однако, продолжал бурно развиваться, компилятор <a href="/wiki/Glasgow_Haskell_Compiler" title="Glasgow Haskell Compiler">GHC</a> был фактическим стандартом в отношении новых возможностей.</p> 
+<p>Сейчас разработка новых версий языка идёт открыто, этот процесс получил название Haskell’<sup id="cite_ref-4" class="reference"><a href="#cite_note-4">[5]</a></sup> (Haskell Prime [ˈhæskəl praɪm], «Хаскель-штрих»). Все желающие могут выдвигать свои предложения к обсуждению, предложения обсуждаются в течение года, комитет отбирает и объявляет предложения, которые готов принять, формируется новый комитет и к концу года готовится новая версия языка. Таким образом, новые версии языка теперь могут появляться каждый год. Планируется объявлять некоторые ревизии «значительными» и поддерживать такие ревизии на протяжении длительного времени.</p> 
+<p>Последняя версия языка — Haskell 2010 — была объявлена в конце 2009 г<sup id="cite_ref-5" class="reference"><a href="#cite_note-5">[6]</a></sup>, но последней «значительной» версией (стандартом) остаётся Haskell 98.</p> 
+<h2><span class="editsection">[<a href="/w/index.php?title=Haskell&amp;action=edit&amp;section=2" title="Править секцию: Характеристики языка">править</a>]</span> <span class="mw-headline" id=".D0.A5.D0.B0.D1.80.D0.B0.D0.BA.D1.82.D0.B5.D1.80.D0.B8.D1.81.D1.82.D0.B8.D0.BA.D0.B8_.D1.8F.D0.B7.D1.8B.D0.BA.D0.B0">Характеристики языка</span></h2> 
+<p>В качестве основных характеристик языка Haskell можно выделить следующие:</p> 
+<ul> 
+<li>возможность использования <a href="/wiki/%D0%9B%D1%8F%D0%BC%D0%B1%D0%B4%D0%B0-%D0%B8%D1%81%D1%87%D0%B8%D1%81%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5" title="Лямбда-исчисление">лямбда-абстракции</a>;</li> 
+<li><a href="/wiki/%D0%A4%D1%83%D0%BD%D0%BA%D1%86%D0%B8%D1%8F_%D0%B2%D1%8B%D1%81%D1%88%D0%B5%D0%B3%D0%BE_%D0%BF%D0%BE%D1%80%D1%8F%D0%B4%D0%BA%D0%B0" title="Функция высшего порядка">функции высшего порядка</a>;</li> 
+<li>частичное применение;</li> 
+<li>недопустимость побочных эффектов (<a href="/wiki/%D0%A7%D0%B8%D1%81%D1%82%D0%BE%D1%82%D0%B0_%D1%8F%D0%B7%D1%8B%D0%BA%D0%B0_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F" title="Чистота языка программирования">чистота языка</a>);</li> 
+<li><a href="/wiki/%D0%9B%D0%B5%D0%BD%D0%B8%D0%B2%D1%8B%D0%B5_%D0%B2%D1%8B%D1%87%D0%B8%D1%81%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F" title="Ленивые вычисления" class="mw-redirect">ленивые вычисления</a> (lazy evaluation);</li> 
+<li><a href="/wiki/%D0%A1%D0%BE%D0%BF%D0%BE%D1%81%D1%82%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_%D1%81_%D0%BE%D0%B1%D1%80%D0%B0%D0%B7%D1%86%D0%BE%D0%BC" title="Сопоставление с образцом">сопоставление с образцом</a>, функциональные образцы (pattern matching);</li> 
+<li>параметрический <a href="/wiki/%D0%9F%D0%BE%D0%BB%D0%B8%D0%BC%D0%BE%D1%80%D1%84%D0%B8%D0%B7%D0%BC_%D0%B2_%D1%8F%D0%B7%D1%8B%D0%BA%D0%B0%D1%85_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F" title="Полиморфизм в языках программирования" class="mw-redirect">полиморфизм</a> (в т.ч. абстрагирование от конструктора типа) и полиморфизм <a href="/w/index.php?title=%D0%9A%D0%BB%D0%B0%D1%81%D1%81_%D1%82%D0%B8%D0%BF%D0%BE%D0%B2&amp;action=edit&amp;redlink=1" class="new" title="Класс типов (страница отсутствует)">классов типов</a>;</li> 
+<li><a href="/wiki/%D0%A1%D1%82%D0%B0%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B0%D1%8F_%D1%82%D0%B8%D0%BF%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F" title="Статическая типизация">статическая типизация</a>;</li> 
+<li>автоматическое выведение типов (основано на <a href="/wiki/%D0%9C%D0%BE%D0%B4%D0%B5%D0%BB%D1%8C_%D1%82%D0%B8%D0%BF%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D0%B8_%D0%A5%D0%B8%D0%BD%D0%B4%D0%BB%D0%B8_%E2%80%94_%D0%9C%D0%B8%D0%BB%D0%BD%D0%B5%D1%80%D0%B0" title="Модель типизации Хиндли — Милнера" class="mw-redirect">модели типизации Хиндли — Милнера</a>);</li> 
+<li><a href="/wiki/%D0%90%D0%BB%D0%B3%D0%B5%D0%B1%D1%80%D0%B0%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D1%82%D0%B8%D0%BF_%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85" title="Алгебраический тип данных">алгебраические типы</a> данных;</li> 
+<li>параметризуемые типы данных;</li> 
+<li><a href="/wiki/%D0%A0%D0%B5%D0%BA%D1%83%D1%80%D1%81%D0%B8%D1%8F" title="Рекурсия">рекурсивные</a> типы данных;</li> 
+<li>абстрактные типы данных (<a href="/wiki/%D0%98%D0%BD%D0%BA%D0%B0%D0%BF%D1%81%D1%83%D0%BB%D1%8F%D1%86%D0%B8%D1%8F_(%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5)" title="Инкапсуляция (программирование)">инкапсуляция</a>);</li> 
+<li><a href="/w/index.php?title=%D0%93%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%D1%8B_%D1%81%D0%BF%D0%B8%D1%81%D0%BA%D0%BE%D0%B2&amp;action=edit&amp;redlink=1" class="new" title="Генераторы списков (страница отсутствует)">генераторы списков</a> (list comprehensions);</li> 
+<li><a href="/wiki/%D0%9E%D1%85%D1%80%D0%B0%D0%BD%D0%B0_(%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5)" title="Охрана (программирование)">охраняющие выражения</a> (guards);</li> 
+<li>возможность писать программы с побочными эффектами без нарушения парадигмы <a href="/wiki/%D0%A4%D1%83%D0%BD%D0%BA%D1%86%D0%B8%D0%BE%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5" title="Функциональное программирование">функционального программирования</a> с помощью <a href="/wiki/%D0%9C%D0%BE%D0%BD%D0%B0%D0%B4%D0%B0_(%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5)" title="Монада (программирование)">монад</a>;</li> 
+<li>возможность интеграции с программами, реализованными на <a href="/wiki/%D0%98%D0%BC%D0%BF%D0%B5%D1%80%D0%B0%D1%82%D0%B8%D0%B2%D0%BD%D1%8B%D0%B9_%D1%8F%D0%B7%D1%8B%D0%BA_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F" title="Императивный язык программирования" class="mw-redirect">императивных языках программирования</a> посредством открытых <a href="/wiki/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D1%84%D0%B5%D0%B9%D1%81" title="Интерфейс">интерфейсов</a> (стандартное расширение языка <a href="http://www.cse.unsw.edu.au/~chak/haskell/ffi/" class="external text" rel="nofollow">Foreign Function Interface</a>).</li> 
+</ul> 
+<p>Со времени принятия последнего стандарта языка (Haskell98) прошло много времени и с тех пор ведущие реализации языка (ghc и hugs) были расширены множеством дополнительных возможностей:</p> 
+<ul> 
+<li><a href="/wiki/%D0%9F%D0%BE%D0%BB%D0%B8%D0%BC%D0%BE%D1%80%D1%84%D0%B8%D0%B7%D0%BC_%D0%B2_%D1%8F%D0%B7%D1%8B%D0%BA%D0%B0%D1%85_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F#.D0.92_.D1.84.D1.83.D0.BD.D0.BA.D1.86.D0.B8.D0.BE.D0.BD.D0.B0.D0.BB.D1.8C.D0.BD.D1.8B.D1.85_.D1.8F.D0.B7.D1.8B.D0.BA.D0.B0.D1.85" title="Полиморфизм в языках программирования" class="mw-redirect">Полиморфизм</a> 2-го и высших рангов (rank-2 and rank-N polymorphism)</li> 
+<li>Функциональные зависимости (FD, functional dependencies)</li> 
+</ul> 
+<h2><span class="editsection">[<a href="/w/index.php?title=Haskell&amp;action=edit&amp;section=3" title="Править секцию: Реализации языка">править</a>]</span> <span class="mw-headline" id=".D0.A0.D0.B5.D0.B0.D0.BB.D0.B8.D0.B7.D0.B0.D1.86.D0.B8.D0.B8_.D1.8F.D0.B7.D1.8B.D0.BA.D0.B0">Реализации языка</span></h2> 
+<p>Есть несколько реализаций языка Хаскель<sup id="cite_ref-6" class="reference"><a href="#cite_note-6">[7]</a></sup>. Некоторые реализации ориентированы на практическое применение, в то время как другие — представляют прежде всего академический интерес.</p> 
+<h3><span class="editsection">[<a href="/w/index.php?title=Haskell&amp;action=edit&amp;section=4" title="Править секцию: Компиляторы и интерпретаторы">править</a>]</span> <span class="mw-headline" id=".D0.9A.D0.BE.D0.BC.D0.BF.D0.B8.D0.BB.D1.8F.D1.82.D0.BE.D1.80.D1.8B_.D0.B8_.D0.B8.D0.BD.D1.82.D0.B5.D1.80.D0.BF.D1.80.D0.B5.D1.82.D0.B0.D1.82.D0.BE.D1.80.D1.8B">Компиляторы и интерпретаторы</span></h3> 
+<p>Наиболее популярен на практике оптимизирующий компилятор <a href="/wiki/Glasgow_Haskell_Compiler" title="Glasgow Haskell Compiler">GHC</a>, который создаёт быстрый код и позволяет использовать многие расширения языка. GHC может оптимизировать как скорость, так и компактность программ, способен создавать многозадачный и параллелизованный код. В комплекте с компилятором GHC поставляется также <a href="/wiki/REPL" title="REPL">интерактивная среда программирования</a> GHCi со встроенным отладчиком. GHC работает в Windows, MacOS X и на нескольких юникс-подобных платформах (Linux, *BSD, Solaris). Именно GHC является стандартным компилятором в Haskell Platform, и именно на нём в первую очередь тестируются все новые библиотеки.</p> 
+<p>Другая популярная реализация языка — интерпретатор <a href="/wiki/HUGS" title="HUGS">HUGS</a>. Он написан на <a href="/wiki/%D0%A1%D0%B8_(%D1%8F%D0%B7%D1%8B%D0%BA_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F)" title="Си (язык программирования)">Си</a>, имеет малый размер дистрибутива и работает практически на всех платформах. HUGS предоставляет <a href="/wiki/REPL" title="REPL">интерактивную среду</a> программирования, но может также запускать программы на Хаскеле в стиле <a href="/wiki/%D0%A1%D0%BA%D1%80%D0%B8%D0%BF%D1%82%D0%BE%D0%B2%D1%8B%D0%B9_%D1%8F%D0%B7%D1%8B%D0%BA" title="Скриптовый язык">скриптовых языков</a>. Пользователи Windows могут использовать графическую интерактивную среду WinHugs. Поскольку HUGS интерпретатор, то программы, запущенные в нём, выполняются медленнее, чем код, созданный большинством компиляторов Хаскеля. HUGS часто рекомендуют в качестве среды для изучения языка. HUGS полностью поддерживает стандарт языка Haskell&#160;98, а также некоторые наиболее популярные расширения языка.</p> 
+<p>Другие известные реализации:</p> 
+<ul> 
+<li>nhc98 — быстрый компилятор, поддерживающий стандарт Haskell 98, написанный на Haskell 98; доступен для всех юникс-подобных платформ, включая MacOS X и Windows/cygwin</li> 
+<li>YHC (York Haskell Compiler) — форк nhc98, ставящий целью быть более переносимым и эффективным, поддерживает отладчик Hat; генерирует промежуточный байт-код, который можно использовать для генерации кода на других языках программирования</li> 
+<li>UHT (Ultrecht Haskell Compiler) — компилятор, поддерживающий Haskell 98 почти полностью, а также некоторые расширения; поддерживает глобальный анализ программ; имеет несколько кодогенераторов, в том числе почти полностью функциональный генераторм JVM-кода, кодогенераторы для LLVM и CLR в состоянии разработки; работает на юникс-подобных системах (включая MacOS X и Windows/cygwin)</li> 
+<li>HBI и HBC — интерпретатор и компилятор, поддерживающие стандарт Haskell 98 с некоторыми расширениями; точно работает в Linux, поддерживается слабо</li> 
+<li>LHC (The Luxurious LHC Haskell Optimization System) — альтернативный кодогенератор для GHC, поддерживающий глобальную низкоуровневую оптимизацию программы в целом</li> 
+<li>jhc — экспериментальный компилятор для исследования возможностей глобальной оптимизации программ</li> 
+<li>Yale Haskell — ранняя реализация языка Хаскель на <a href="/wiki/Lisp" title="Lisp" class="mw-redirect">Lisp</a></li> 
+</ul> 
+<h3><span class="editsection">[<a href="/w/index.php?title=Haskell&amp;action=edit&amp;section=5" title="Править секцию: Haskell Platform">править</a>]</span> <span class="mw-headline" id="Haskell_Platform">Haskell Platform</span></h3> 
+<p>В 2009 году сформировалась концепция <a href="http://hackage.haskell.org/platform/" class="external text" rel="nofollow">Haskell Platform</a> — стандартного дистрибутива языка, включающего кроме компилятора (GHC), также дополнительный инструментарий (систему сборки и развёртывания пакетов Cabal) и набор популярных библиотек.</p> 
+<p>Сейчас Haskell Platform — это рекомендованный базовый дистрибутив для разработчиков. Готовые сборки Haskell Platform доступны для Windows, MacOS X и ряда дистрибутивов Linux.</p> 
+<h3><span class="editsection">[<a href="/w/index.php?title=Haskell&amp;action=edit&amp;section=6" title="Править секцию: Альтернативные целевые платформы">править</a>]</span> <span class="mw-headline" id=".D0.90.D0.BB.D1.8C.D1.82.D0.B5.D1.80.D0.BD.D0.B0.D1.82.D0.B8.D0.B2.D0.BD.D1.8B.D0.B5_.D1.86.D0.B5.D0.BB.D0.B5.D0.B2.D1.8B.D0.B5_.D0.BF.D0.BB.D0.B0.D1.82.D1.84.D0.BE.D1.80.D0.BC.D1.8B">Альтернативные целевые платформы</span></h3> 
+<p>Большинство компиляторов Хаскеля создают непосредственно <a href="/wiki/%D0%9C%D0%B0%D1%88%D0%B8%D0%BD%D0%BD%D1%8B%D0%B9_%D0%BA%D0%BE%D0%B4" title="Машинный код">машинный код</a> для используемой платформы, но есть несколько проектов, позволяющих компилировать Хаскель в код для <a href="/wiki/%D0%92%D0%B8%D1%80%D1%82%D1%83%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F_%D0%BC%D0%B0%D1%88%D0%B8%D0%BD%D0%B0" title="Виртуальная машина">виртуальных машин</a> или генерировать код на других языках программирования. Степень зрелости и уровень поддержки подобных проектов сильно разнится.</p> 
+<ul> 
+<li><a href="/wiki/Low_Level_Virtual_Machine" title="Low Level Virtual Machine">LLVM</a>:
+<ul> 
+<li><a href="http://www.haskell.org/pipermail/cvs-ghc/2010-February/052606.html" class="external text" rel="nofollow">патч для GHC</a>, добавляющий генератор кода для LLVM, вероятно будет включен в будущие версии компилятора GHC<sup id="cite_ref-7" class="reference"><a href="#cite_note-7">[8]</a></sup>; использование LLVM позволяет достичь большей производительности на ряде задач<sup id="cite_ref-8" class="reference"><a href="#cite_note-8">[9]</a></sup>.</li> 
+<li>альтернативный кодогенератор в UHT (работоспособен частично)</li> 
+</ul> 
+</li> 
+</ul> 
+<ul> 
+<li>виртуальная машина Java (JVM):
+<ul> 
+<li><a href="http://wiki.brianweb.net/LambdaVM/LambdaVM" class="external text" rel="nofollow">LambdaVM</a> — патч для GHC, добавляющий генератор байткода JVM</li> 
+<li><a href="http://semantic.org/jvm-bridge/" class="external text" rel="nofollow">jvm-bridge</a> — мост между Haskell и JVM (для GHC)</li> 
+<li><a href="http://www.scdi.org/~avernet/projects/jaskell/" class="external text" rel="nofollow">jaskell</a> — генератор байт-кода JVM (вероятно заброшен)</li> 
+<li>альтернативный кодогенератор в UHT (работоспособен почти полностью)</li> 
+</ul> 
+</li> 
+</ul> 
+<ul> 
+<li>Common Language Runtime (.Net):
+<ul> 
+<li><a href="http://tom.lokhorst.eu/ehc/clr/" class="external text" rel="nofollow">прототип генератора MSIL-кода</a> для компилятора EHT/UHT</li> 
+<li>некоторые проекты по поддержке CLR упоминаются в <a href="http://www.haskell.org/haskellwiki/GHC:FAQ#Why_isn.27t_GHC_available_for_.NET_or_on_the_JVM.3F" class="external text" rel="nofollow">GHC FAQ</a>, на начало 2010 года их состояние не ясно</li> 
+</ul> 
+</li> 
+</ul> 
+<ul> 
+<li>JavaScript:
+<ul> 
+<li><a href="http://vir.mskhug.ru/" class="external text" rel="nofollow">кодогенератор JavaScript для GHC</a> — патч для GHC позволяющий компилировать программы в JavaScript-код</li> 
+<li><a href="http://haskell.org/haskellwiki/Yhc/Javascript" class="external text" rel="nofollow">Ycr2Js</a> — конвертер байт-кода компилятора YHC в JavaScript</li> 
+</ul> 
+</li> 
+</ul> 
+<p>Несколько интересных целевых платформ доступны при использовании компилятора YHC, в частности существуют интерпретатор байт-кода YHC на Питоне и конвертер байт-кода YHC в Erlang Core, но эти разработки пока ещё экспериментальны. Также существуют реализации подмножеств языка на разных целевых платформах.</p> 
+<h3><span class="editsection">[<a href="/w/index.php?title=Haskell&amp;action=edit&amp;section=7" title="Править секцию: Расширения языка">править</a>]</span> <span class="mw-headline" id=".D0.A0.D0.B0.D1.81.D1.88.D0.B8.D1.80.D0.B5.D0.BD.D0.B8.D1.8F_.D1.8F.D0.B7.D1.8B.D0.BA.D0.B0">Расширения языка</span></h3> 
+<ul> 
+<li>макрорасширение с контролем типов (<a href="http://www.haskell.org/th" class="external text" rel="nofollow">Template Haskell</a>);</li> 
+<li><a href="/wiki/%D0%9E%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D0%BD%D0%BE-%D0%BE%D1%80%D0%B8%D0%B5%D0%BD%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D0%BE%D0%B5_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5" title="Объектно-ориентированное программирование">объектно-ориентированное программирование</a> (<b>O’Haskell</b>, <b>Haskell++</b> и <b>Mondrian</b>).</li> 
+</ul> 
+<p>Расширения реализаций языка (относится к <b>GHC</b>):</p> 
+<ul> 
+<li>развитие системы типизации;</li> 
+<li><a href="/wiki/%D0%9C%D0%BD%D0%BE%D0%B3%D0%BE%D0%BF%D0%BE%D1%82%D0%BE%D1%87%D0%BD%D0%BE%D1%81%D1%82%D1%8C" title="Многопоточность">многопоточность</a>;</li> 
+<li><a href="/wiki/%D0%9F%D0%B0%D1%80%D0%B0%D0%BB%D0%BB%D0%B5%D0%BB%D1%8C%D0%BD%D1%8B%D0%B5_%D0%B2%D1%8B%D1%87%D0%B8%D1%81%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F" title="Параллельные вычисления" class="mw-redirect">параллельные вычисления</a>;</li> 
+<li><a href="/wiki/%D0%A0%D0%B0%D1%81%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D1%91%D0%BD%D0%BD%D1%8B%D0%B5_%D0%B2%D1%8B%D1%87%D0%B8%D1%81%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F" title="Распределённые вычисления">распределённые вычисления</a>.</li> 
+</ul> 
+<h2><span class="editsection">[<a href="/w/index.php?title=Haskell&amp;action=edit&amp;section=8" title="Править секцию: Примеры">править</a>]</span> <span class="mw-headline" id=".D0.9F.D1.80.D0.B8.D0.BC.D0.B5.D1.80.D1.8B">Примеры</span></h2> 
+<h3><span class="editsection">[<a href="/w/index.php?title=Haskell&amp;action=edit&amp;section=9" title="Править секцию: Вычисление факториала">править</a>]</span> <span class="mw-headline" id=".D0.92.D1.8B.D1.87.D0.B8.D1.81.D0.BB.D0.B5.D0.BD.D0.B8.D0.B5_.D1.84.D0.B0.D0.BA.D1.82.D0.BE.D1.80.D0.B8.D0.B0.D0.BB.D0.B0">Вычисление факториала</span></h3> 
+<p>Следующий пример показывает <a href="/wiki/%D0%A1%D0%B8%D0%BD%D1%82%D0%B0%D0%BA%D1%81%D0%B8%D1%81" title="Синтаксис">синтаксис</a> языка Haskell при реализации функции для вычисления <a href="/wiki/%D0%A4%D0%B0%D0%BA%D1%82%D0%BE%D1%80%D0%B8%D0%B0%D0%BB" title="Факториал">факториала</a>:</p> 
+<div dir="ltr" class="mw-geshi" style="text-align: left;"> 
+<div class="haskell source-haskell" style="font-family:monospace;"> 
+<pre class="de1"> 
+ fac <span class="sy0">::</span> <span class="kw4">Integer</span> <span class="sy0">-&gt;</span> <span class="kw4">Integer</span> 
+ fac 0 <span class="sy0">=</span> 1
+ fac n <span class="sy0">|</span> n <span class="sy0">&gt;</span> <span class="nu0">0</span> <span class="sy0">=</span> n <span class="sy0">*</span> fac <span class="br0">(</span>n <span class="sy0">-</span> <span class="nu0">1</span><span class="br0">)</span> 
+</pre></div> 
+</div> 
+<p>Это определение описывает процесс вычисления факториала в виде <a href="/wiki/%D0%A0%D0%B5%D0%BA%D1%83%D1%80%D1%81%D0%B8%D1%8F" title="Рекурсия">рекурсивной функции</a>. Это определение похоже на то, которое можно найти в учебниках по <a href="/wiki/%D0%98%D0%BD%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%82%D0%B8%D0%BA%D0%B0" title="Информатика">информатике</a>. Большая часть исходного кода на языке Haskell походит на <a href="/wiki/%D0%9C%D0%B0%D1%82%D0%B5%D0%BC%D0%B0%D1%82%D0%B8%D0%BA%D0%B0" title="Математика">математическую</a> нотацию в аспектах синтаксиса и использования, например, вышеприведённый пример можно переписать в виде</p> 
+<div dir="ltr" class="mw-geshi" style="text-align: left;"> 
+<div class="haskell source-haskell" style="font-family:monospace;"> 
+<pre class="de1"> 
+fac n <span class="sy0">=</span> <span class="kw3">product</span> <span class="br0">[</span>1<span class="sy0">..</span>n<span class="br0">]</span> 
+</pre></div> 
+</div> 
+<p>что соответствует математическому определению факториала.</p> 
+<p>Первая строка в приведённом выше определении является необязательной, так как определяет (вернее, ограничивает) тип функции, который может быть выведен системой типизации самостоятельно. Эта строка может быть прочитана как: <i>функция <code>fac</code> имеет тип (<code>::</code>) из целого в целое (<span style="white-space: nowrap;"><code>Integer -&gt; Integer</code></span>)</i>. Это значит, что она получает на вход один <a href="/wiki/%D0%A6%D0%B5%D0%BB%D1%8B%D0%B9_%D1%82%D0%B8%D0%BF" title="Целый тип">целочисленный</a> <a href="/wiki/%D0%90%D1%80%D0%B3%D1%83%D0%BC%D0%B5%D0%BD%D1%82" title="Аргумент">аргумент</a> и возвращает результат также целого типа. Как сказано выше, типы всех функций могут быть выведены автоматически, если программист явно не указал их.</p> 
+<p>Вторая строка основана на механизме <a href="/wiki/%D0%A1%D0%BE%D0%BF%D0%BE%D1%81%D1%82%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_%D1%81_%D0%BE%D0%B1%D1%80%D0%B0%D0%B7%D1%86%D0%BE%D0%BC" title="Сопоставление с образцом">сопоставления с образцами</a>, который является важной особенностью языка Haskell. Этот механизм заставляет интерпретатор языка пробегаться сверху вниз по строкам определения и находить первый образец (то есть набор формальных параметров, который подходит под значения фактически переданных параметров в функцию) и выполнять определение, записанное с этим образцом. В данном случае вторая строка определения будет выбрана тогда, когда фактический параметр при вызове функции <code>fac</code> будет равен нулю.</p> 
+<p>В третьей строке помимо механизма сопоставления с образцами использовано охраняющее выражение — <span style="white-space: nowrap;"><code>n &gt; 0</code></span>. Оно гарантирует, что функция не будет работать для отрицательных чисел, для которых факториал неопределён. Если отрицательное число будет передано в качестве фактического параметра в функцию <code>fac</code>, то программа остановится с сообщением об ошибке.</p> 
+<h3><span class="editsection">[<a href="/w/index.php?title=Haskell&amp;action=edit&amp;section=10" title="Править секцию: Калькулятор">править</a>]</span> <span class="mw-headline" id=".D0.9A.D0.B0.D0.BB.D1.8C.D0.BA.D1.83.D0.BB.D1.8F.D1.82.D0.BE.D1.80">Калькулятор</span></h3> 
+<p>Простейший <a href="/wiki/%D0%9A%D0%B0%D0%BB%D1%8C%D0%BA%D1%83%D0%BB%D1%8F%D1%82%D0%BE%D1%80" title="Калькулятор">калькулятор</a> для вычисления выражений в <a href="/wiki/%D0%9E%D0%B1%D1%80%D0%B0%D1%82%D0%BD%D0%B0%D1%8F_%D0%BF%D0%BE%D0%BB%D1%8C%D1%81%D0%BA%D0%B0%D1%8F_%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D1%8C" title="Обратная польская запись">обратной польской записи</a> может быть определён на языке Haskell при помощи одной функции:</p> 
+<div dir="ltr" class="mw-geshi" style="text-align: left;"> 
+<div class="haskell source-haskell" style="font-family:monospace;"> 
+<pre class="de1"> 
+ calc <span class="sy0">::</span> <span class="kw4">String</span> <span class="sy0">-&gt;</span> <span class="br0">[</span><span class="kw4">Float</span><span class="br0">]</span> 
+ calc <span class="sy0">=</span> <span class="kw3">foldl</span> f <span class="br0">[</span><span class="br0">]</span> <span class="sy0">.</span> <span class="kw3">words</span> 
+   <span class="kw1">where</span> 
+     f <span class="br0">(</span>x:y:zs<span class="br0">)</span> <span class="st0">"+"</span> <span class="sy0">=</span> <span class="br0">(</span>y <span class="sy0">+</span> x<span class="br0">)</span>:zs
+     f <span class="br0">(</span>x:y:zs<span class="br0">)</span> <span class="st0">"-"</span> <span class="sy0">=</span> <span class="br0">(</span>y <span class="sy0">-</span> x<span class="br0">)</span>:zs
+     f <span class="br0">(</span>x:y:zs<span class="br0">)</span> <span class="st0">"*"</span> <span class="sy0">=</span> <span class="br0">(</span>y <span class="sy0">*</span> x<span class="br0">)</span>:zs
+     f <span class="br0">(</span>x:y:zs<span class="br0">)</span> <span class="st0">"/"</span> <span class="sy0">=</span> <span class="br0">(</span>y <span class="sy0">/</span> x<span class="br0">)</span>:zs
+     f xs y         <span class="sy0">=</span> <span class="kw3">read</span> y : xs
+</pre></div> 
+</div> 
+<p>В данном определении функция левосторонней <a href="/wiki/%D0%A1%D0%B2%D1%91%D1%80%D1%82%D0%BA%D0%B0_%D1%81%D0%BF%D0%B8%D1%81%D0%BA%D0%B0" title="Свёртка списка">свёртки</a> (<code>foldl</code>) вызывается с фактическими параметрами <code>[]</code> (пустой список — начальное значение для свёртки), <code>f</code> (функция для интерпретации одного слова во входном выражении) и списка, полученного разбивкой исходной строки с выражением на слова, то есть строки, отделённые друг от друга пробельными символами. В результате работы получается список, который содержит промежуточные и окончательное значения, получаемые при вычислении входного выражения.</p> 
+<h3><span class="editsection">[<a href="/w/index.php?title=Haskell&amp;action=edit&amp;section=11" title="Править секцию: Числа Фибоначчи">править</a>]</span> <span class="mw-headline" id=".D0.A7.D0.B8.D1.81.D0.BB.D0.B0_.D0.A4.D0.B8.D0.B1.D0.BE.D0.BD.D0.B0.D1.87.D1.87.D0.B8">Числа Фибоначчи</span></h3> 
+<p>Другой пример показывает способ вычисления бесконечного списка <a href="/wiki/%D0%A7%D0%B8%D1%81%D0%BB%D0%B0_%D0%A4%D0%B8%D0%B1%D0%BE%D0%BD%D0%B0%D1%87%D1%87%D0%B8" title="Числа Фибоначчи">чисел Фибоначчи</a> за линейное время:</p> 
+<div dir="ltr" class="mw-geshi" style="text-align: left;"> 
+<div class="haskell source-haskell" style="font-family:monospace;"> 
+<pre class="de1"> 
+fibs <span class="sy0">=</span> 0 : 1 : <span class="kw3">zipWith</span> <span class="br0">(</span><span class="sy0">+</span><span class="br0">)</span> fibs <span class="br0">(</span><span class="kw3">tail</span> fibs<span class="br0">)</span> 
+</pre></div> 
+</div> 
+<p>Бесконечный список создаётся при помощи механизма <a href="/wiki/%D0%9A%D0%BE%D1%80%D0%B5%D0%BA%D1%83%D1%80%D1%81%D0%B8%D1%8F" title="Корекурсия">корекурсии</a> — последующие значения списка вычисляются на основе имеющихся с начальными <code>0</code> и <code>1</code> в качестве первых двух элементов списка. Это определение является примером применения механизма ленивых вычислений, который является важнейшей частью языка Haskell. Для понимания того, как это определение работает, можно рассмотреть вычисление первых шести чисел Фибоначчи при помощи этой функции:</p> 
+<pre> 
+fibs         = 0 : 1 : 1 : 2 : 3 : 5 : ...
+               +   +   +   +   +   +
+tail fibs    = 1 : 1 : 2 : 3 : 5 : ...
+               =   =   =   =   =   =
+zipWith ...  = 1 : 2 : 3 : 5 : 8 : ...
+fibs = 0 : 1 : 1 : 2 : 3 : 5 : 8 : ...
+</pre> 
+<p>Та же самая функция может быть записана короче и более понятно при использовании расширения языка Haskell, которое реализовано в компиляторе GHC (параллелизация <a href="/w/index.php?title=%D0%9E%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D0%B8%D1%82%D0%B5%D0%BB%D1%8C_%D1%81%D0%BF%D0%B8%D1%81%D0%BA%D0%B0&amp;action=edit&amp;redlink=1" class="new" title="Определитель списка (страница отсутствует)">определителей списков</a>, Parallel <a href="http://en.wikipedia.org/wiki/List_Comprehension" class="external text" rel="nofollow">List Comprehensions</a>):</p> 
+<div dir="ltr" class="mw-geshi" style="text-align: left;"> 
+<div class="haskell source-haskell" style="font-family:monospace;"> 
+<pre class="de1"> 
+ fibs <span class="sy0">=</span> 0 : 1 : <span class="br0">[</span>a <span class="sy0">+</span> b <span class="sy0">|</span> a <span class="sy0">&lt;-</span> fibs
+                       <span class="sy0">|</span> b <span class="sy0">&lt;-</span> <span class="kw3">tail</span> fibs<span class="br0">]</span> 
+</pre></div> 
+</div> 
+<h3><span class="editsection">[<a href="/w/index.php?title=Haskell&amp;action=edit&amp;section=12" title="Править секцию: Простые числа">править</a>]</span> <span class="mw-headline" id=".D0.9F.D1.80.D0.BE.D1.81.D1.82.D1.8B.D0.B5_.D1.87.D0.B8.D1.81.D0.BB.D0.B0">Простые числа</span></h3> 
+<p>В этих примерах показано, как можно использовать списочные выражения (генераторы списков, list comprehensions). Реализация нахождения всех <a href="/wiki/%D0%9F%D1%80%D0%BE%D1%81%D1%82%D1%8B%D0%B5_%D1%87%D0%B8%D1%81%D0%BB%D0%B0" title="Простые числа" class="mw-redirect">простых чисел</a> обычным путём (проверка каждого числа на простоту).</p> 
+<div dir="ltr" class="mw-geshi" style="text-align: left;"> 
+<div class="haskell source-haskell" style="font-family:monospace;"> 
+<pre class="de1"> 
+ <span class="co1">-- общее определение (все натуральные числа, которые являются простыми :-)</span> 
+ primes <span class="sy0">=</span> <span class="br0">[</span>n <span class="sy0">|</span> n <span class="sy0">&lt;-</span> <span class="br0">[</span>2<span class="sy0">..</span><span class="br0">]</span><span class="sy0">,</span> isPrime n<span class="br0">]</span> 
+ 
+ <span class="co1">-- список остатков от деления n на все числа</span> 
+ <span class="co1">-- из диапазона [2..n/2]</span> 
+ listOfRemainders n <span class="sy0">=</span><span class="br0">[</span>n `<span class="kw3">mod</span>` x <span class="sy0">|</span> x <span class="sy0">&lt;-</span> <span class="br0">[</span>2<span class="sy0">..</span><span class="br0">(</span>n `<span class="kw3">div</span>` <span class="nu0">2</span><span class="br0">)</span><span class="br0">]</span><span class="br0">]</span> 
+ 
+ <span class="co1">-- Число простое, если приведённый выше список не содержит нулей</span> 
+ isPrime n <span class="sy0">=</span> <span class="kw3">null</span> <span class="br0">(</span><span class="kw3">filter</span> <span class="br0">(</span><span class="sy0">==</span><span class="nu0">0</span><span class="br0">)</span> <span class="br0">(</span>listOfRemainders n<span class="br0">)</span><span class="br0">)</span> 
+</pre></div> 
+</div> 
+<p>а также с помощью <a href="/wiki/%D0%A0%D0%B5%D1%88%D0%B5%D1%82%D0%BE_%D0%AD%D1%80%D0%B0%D1%82%D0%BE%D1%81%D1%84%D0%B5%D0%BD%D0%B0" title="Решето Эратосфена">решета Эратосфена</a>:</p> 
+<div dir="ltr" class="mw-geshi" style="text-align: left;"> 
+<div class="haskell source-haskell" style="font-family:monospace;"> 
+<pre class="de1"> 
+ ero <span class="sy0">=</span> eroPrimes <span class="br0">[</span>2<span class="sy0">..</span><span class="br0">]</span> 
+ eroPrimes <span class="br0">(</span>x : xs<span class="br0">)</span> <span class="sy0">=</span> x : eroPrimes <span class="br0">[</span>y <span class="sy0">|</span> y <span class="sy0">&lt;-</span> xs <span class="sy0">,</span> y `<span class="kw3">mod</span>` x <span class="sy0">/=</span> <span class="nu0">0</span><span class="br0">]</span> 
+</pre></div> 
+</div> 
+<p>И получение, вообще говоря, бесконечного списка простых чисел:</p> 
+<div dir="ltr" class="mw-geshi" style="text-align: left;"> 
+<div class="haskell source-haskell" style="font-family:monospace;"> 
+<pre class="de1"> 
+ listOfPrimes <span class="sy0">=</span> <span class="br0">[</span>n <span class="sy0">|</span> n <span class="sy0">&lt;-</span> <span class="br0">[</span>2<span class="sy0">..</span><span class="br0">]</span><span class="sy0">,</span> <span class="kw3">and</span> <span class="br0">[</span>n `<span class="kw3">mod</span>` <span class="br0">(</span>n<span class="sy0">-</span>x<span class="br0">)</span> <span class="sy0">/=</span> 0 <span class="sy0">|</span> x <span class="sy0">&lt;-</span> <span class="br0">[</span>1<span class="sy0">..</span>n<span class="sy0">-</span><span class="nu0">2</span><span class="br0">]</span> <span class="br0">]</span> <span class="br0">]</span> 
+</pre></div> 
+</div> 
+<h3><span class="editsection">[<a href="/w/index.php?title=Haskell&amp;action=edit&amp;section=13" title="Править секцию: Описание игральных карт">править</a>]</span> <span class="mw-headline" id=".D0.9E.D0.BF.D0.B8.D1.81.D0.B0.D0.BD.D0.B8.D0.B5_.D0.B8.D0.B3.D1.80.D0.B0.D0.BB.D1.8C.D0.BD.D1.8B.D1.85_.D0.BA.D0.B0.D1.80.D1.82">Описание игральных карт</span></h3> 
+<p>Простой пример использования <a href="/wiki/%D0%90%D0%BB%D0%B3%D0%B5%D0%B1%D1%80%D0%B0%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D1%82%D0%B8%D0%BF_%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85" title="Алгебраический тип данных">алгебраических типов данных</a> для описания игральных карт. Идентификаторы типов начинаются с заглавных букв. Идентификаторы переменных и функций — со строчных. Новые алгебраические типы определяются ключевым словом <code>data</code>. Синонимы типов определяются ключевым словом <code>type</code>.</p> 
+<div dir="ltr" class="mw-geshi" style="text-align: left;"> 
+<div class="haskell source-haskell" style="font-family:monospace;"> 
+<pre class="de1"> 
+<span class="co1">-- Алгебраический тип-сумма Масть («перечисление»).</span> 
+<span class="co1">-- Значением типа Масть может быть одно из указанных справа</span> 
+<span class="co1">-- (или Пики, или Трефы, или Бубны, или Червы).</span> 
+<span class="co1">-- «Масть» здесь выступает конструктором _типа_,</span> 
+<span class="co1">-- а «Пики», «Трефы» и т.д. — конструкторами _данных_.</span> 
+<span class="kw1">data</span> Масть <span class="sy0">=</span> Пики <span class="sy0">|</span> Трефы <span class="sy0">|</span> Бубны <span class="sy0">|</span> Червы
+  <span class="co1">-- необязательное автоматическое выведение экземпляров классов,</span> 
+  <span class="co1">-- позволяющее преобразовывать значения в строки (функцией show из Show)</span> 
+  <span class="co1">-- и обратно (функцией read из Read), а также сравнивать их между собой</span> 
+  <span class="co1">-- (функциями классов Eq и Ord).</span> 
+  <span class="kw1">deriving</span> <span class="br0">(</span><span class="kw4">Show</span><span class="sy0">,</span> <span class="kw4">Read</span><span class="sy0">,</span> <span class="kw4">Eq</span><span class="sy0">,</span> <span class="kw4">Ord</span><span class="br0">)</span> 
+ 
+<span class="co1">-- Алгебраический тип-сумма Достоинство</span> 
+<span class="kw1">data</span> Достоинство <span class="sy0">=</span> Семёрка <span class="sy0">|</span> Восьмёрка <span class="sy0">|</span> Девятка <span class="sy0">|</span> Десятка
+                 <span class="sy0">|</span> Валет <span class="sy0">|</span> Дама <span class="sy0">|</span> Король <span class="sy0">|</span> Туз
+  <span class="kw1">deriving</span> <span class="br0">(</span><span class="kw4">Show</span><span class="sy0">,</span> <span class="kw4">Read</span><span class="sy0">,</span> <span class="kw4">Eq</span><span class="sy0">,</span> <span class="kw4">Ord</span><span class="br0">)</span> 
+ 
+<span class="co1">-- Алгебраический тип-произведение Карта («тип-кортеж»).</span> 
+<span class="co1">-- Значения типа Карта — комбинации значений типов Достоинство и Масть,</span> 
+<span class="co1">-- объединённые конструктором данных К.</span> 
+<span class="co1">-- Часто имена конструктора данных и конструктора типа совпадают.</span> 
+<span class="kw1">data</span> Карта <span class="sy0">=</span> К Достоинство Масть
+  <span class="kw1">deriving</span> <span class="br0">(</span><span class="kw4">Show</span><span class="sy0">,</span> <span class="kw4">Read</span><span class="sy0">,</span> <span class="kw4">Eq</span><span class="sy0">,</span> <span class="kw4">Ord</span><span class="br0">)</span> 
+ 
+<span class="co1">-- Синоним списка значений типа Карта.</span> 
+<span class="kw1">type</span> Рука <span class="sy0">=</span> <span class="br0">[</span>Карта<span class="br0">]</span> 
+ 
+<span class="co1">-- Функция, определяющая, есть ли в руке марьяж (король и дама одной масти).</span> 
+естьМарьяж <span class="sy0">::</span> Рука <span class="sy0">-&gt;</span> <span class="kw4">Bool</span> 
+естьМарьяж карты <span class="sy0">=</span> 
+   <span class="co1">-- достаточно найти марьяж хотя бы одной масти</span> 
+   <span class="kw3">any</span> <span class="br0">(</span>естьМарьяжМасти<span class="br0">)</span> <span class="br0">[</span>Пики<span class="sy0">,</span> Трефы<span class="sy0">,</span> Бубны<span class="sy0">,</span> Червы<span class="br0">]</span> 
+   <span class="kw1">where</span> 
+     <span class="co1">-- проверить, есть ли и дама, и король заданной масти м в руке</span> 
+     естьМарьяжМасти м <span class="sy0">=</span> <span class="br0">(</span>К Дама м<span class="br0">)</span> `<span class="kw3">elem</span>` карты <span class="sy0">&amp;&amp;</span> <span class="br0">(</span>К Король м<span class="br0">)</span> `<span class="kw3">elem</span>` карты
+ 
+<span class="co1">-- примеры раздач</span> 
+рука <span class="sy0">=</span> <span class="br0">[</span> К Дама Трефы<span class="sy0">,</span> К Семёрка Червы<span class="sy0">,</span> К Король Трефы<span class="sy0">,</span> К Туз Бубны <span class="br0">]</span> 
+рука<span class="sy0">_</span>без<span class="sy0">_</span>марьяжа <span class="sy0">=</span> <span class="br0">[</span> К Десятка Пики<span class="sy0">,</span> К Король Пики<span class="sy0">,</span> К Дама Червы <span class="br0">]</span> 
+ 
+main <span class="sy0">=</span> <span class="kw1">do</span> 
+  проверить рука
+  проверить рука<span class="sy0">_</span>без<span class="sy0">_</span>марьяжа
+  проверить <span class="br0">[</span><span class="br0">]</span> <span class="co1">-- пустая раздача</span> 
+  <span class="kw1">where</span> 
+    проверить кк <span class="sy0">=</span> <span class="kw3">putStrLn</span> <span class="br0">(</span> <span class="br0">(</span><span class="kw3">show</span> кк<span class="br0">)</span> <span class="sy0">++</span> <span class="st0">" -&gt; "</span> <span class="sy0">++</span> <span class="br0">(</span><span class="kw3">show</span> <span class="br0">(</span>естьМарьяж кк<span class="br0">)</span><span class="br0">)</span> <span class="br0">)</span> 
+ 
+<span class="co1">-- Вывод:</span> 
+<span class="co1">-- [К Дама Трефы,К Семёрка Червы,К Король Трефы,К Туз Бубны] -&gt; True</span> 
+<span class="co1">-- [К Десятка Пики,К Король Пики,К Дама Червы] -&gt; False</span> 
+<span class="co1">-- [] -&gt; False</span> 
+</pre></div> 
+</div> 
+<h3><span class="editsection">[<a href="/w/index.php?title=Haskell&amp;action=edit&amp;section=14" title="Править секцию: Численное интегрирование">править</a>]</span> <span class="mw-headline" id=".D0.A7.D0.B8.D1.81.D0.BB.D0.B5.D0.BD.D0.BD.D0.BE.D0.B5_.D0.B8.D0.BD.D1.82.D0.B5.D0.B3.D1.80.D0.B8.D1.80.D0.BE.D0.B2.D0.B0.D0.BD.D0.B8.D0.B5">Численное интегрирование</span></h3> 
+<p>Численное интегрирование <img class="tex" alt="\int\limits_0^{2\pi}x\sin x\,{\rm d}x = -2\pi" src="http://upload.wikimedia.org/math/7/2/a/72a033f11421b7d630a29ba64afa423c.png" /> методом трапеций:</p> 
+<div dir="ltr" class="mw-geshi" style="text-align: left;"> 
+<div class="haskell source-haskell" style="font-family:monospace;"> 
+<pre class="de1"> 
+trapezeIntegrate f a b n <span class="sy0">=</span> 
+    <span class="br0">(</span><span class="br0">(</span><span class="kw3">sum</span> <span class="sy0">$</span> <span class="kw3">map</span> f <span class="br0">[</span>a <span class="sy0">+</span> h<span class="sy0">,</span> a <span class="sy0">+</span> 2<span class="sy0">*</span>h <span class="sy0">..</span> b <span class="sy0">-</span> h<span class="br0">]</span><span class="br0">)</span> <span class="sy0">+</span> t<span class="br0">)</span> <span class="sy0">*</span> h
+    <span class="kw1">where</span> 
+        t <span class="sy0">=</span> <span class="br0">(</span>f a <span class="sy0">+</span> f b<span class="br0">)</span><span class="sy0">/</span>2
+        h <span class="sy0">=</span> <span class="br0">(</span>b <span class="sy0">-</span> a<span class="br0">)</span> <span class="sy0">/</span> n
+ 
+main <span class="sy0">=</span> <span class="kw1">do</span> 
+    <span class="kw3">print</span> <span class="sy0">$</span> trapezeIntegrate <span class="br0">(</span>\x <span class="sy0">-&gt;</span> x<span class="sy0">*</span><span class="kw3">sin</span> x<span class="br0">)</span> 0 <span class="br0">(</span>2<span class="sy0">*</span><span class="kw3">pi</span><span class="br0">)</span> <span class="nu0">100</span> 
+ 
+<span class="co1">-- Вывод: -6.281118086046067</span> 
+</pre></div> 
+</div> 
+<h3><span class="editsection">[<a href="/w/index.php?title=Haskell&amp;action=edit&amp;section=15" title="Править секцию: Проверка палиндромов">править</a>]</span> <span class="mw-headline" id=".D0.9F.D1.80.D0.BE.D0.B2.D0.B5.D1.80.D0.BA.D0.B0_.D0.BF.D0.B0.D0.BB.D0.B8.D0.BD.D0.B4.D1.80.D0.BE.D0.BC.D0.BE.D0.B2">Проверка <a href="/wiki/%D0%9F%D0%B0%D0%BB%D0%B8%D0%BD%D0%B4%D1%80%D0%BE%D0%BC" title="Палиндром">палиндромов</a></span></h3> 
+<p>Как видно, Хаскель прекрасно работает с <a href="/wiki/%D0%AE%D0%BD%D0%B8%D0%BA%D0%BE%D0%B4" title="Юникод">Юникодом</a>.</p> 
+<div dir="ltr" class="mw-geshi" style="text-align: left;"> 
+<div class="haskell source-haskell" style="font-family:monospace;"> 
+<pre class="de1"> 
+<span class="kw1">import</span> <span class="kw4">Char</span> <span class="co1">-- функции toLower и isAlpha</span> 
+ 
+palindrom <span class="sy0">::</span> <span class="br0">[</span><span class="kw4">Char</span><span class="br0">]</span> <span class="sy0">-&gt;</span> <span class="kw4">Bool</span> 
+palindrom s <span class="sy0">=</span> 
+    norm <span class="sy0">==</span> <span class="kw3">reverse</span> norm
+    <span class="kw1">where</span> norm <span class="sy0">=</span> <span class="kw3">map</span> toLower <span class="sy0">.</span> <span class="kw3">filter</span> <span class="br0">(</span>isAlpha<span class="br0">)</span> <span class="sy0">$</span> s
+ 
+test <span class="sy0">::</span> <span class="br0">[</span><span class="kw4">Char</span><span class="br0">]</span> <span class="sy0">-&gt;</span> <span class="kw4">IO</span> <span class="br0">(</span><span class="br0">)</span> 
+test s <span class="sy0">=</span> 
+    <span class="kw3">putStrLn</span> <span class="sy0">$</span> s <span class="sy0">++</span> <span class="st0">": "</span> <span class="sy0">++</span> <span class="kw3">show</span> <span class="br0">(</span>palindrom s<span class="br0">)</span> 
+ 
+main <span class="sy0">=</span> <span class="kw1">do</span> 
+    test <span class="st0">"А в Енисее — синева"</span> 
+    test <span class="st0">"А роза упала не на лапу Азора"</span> 
+    test <span class="st0">"Не роза упала на лапу Азора"</span> 
+    test <span class="st0">"Мир как Рим"</span> 
+    test <span class="st0">"Мир не Рим"</span> 
+    test <span class="st0">"Dogma: I am God"</span> 
+    test <span class="st0">"I prefer Pi"</span> 
+    test <span class="st0">"حوت فمه مفتوح"</span> 
+    test <span class="st0">"Ne mateno, bone tamen"</span> 
+ 
+<span class="co1">-- Вывод:</span> 
+<span class="co1">-- А в Енисее — синева: True</span> 
+<span class="co1">-- А роза упала не на лапу Азора: True</span> 
+<span class="co1">-- Не роза упала на лапу Азора: False</span> 
+<span class="co1">-- Мир как Рим: True</span> 
+<span class="co1">-- Мир не Рим: False</span> 
+<span class="co1">-- Dogma: I am God: True</span> 
+<span class="co1">-- I prefer Pi: True</span> 
+<span class="co1">-- حوت فمه مفتوح: True</span> 
+<span class="co1">-- Ne mateno, bone tamen: True</span> 
+</pre></div> 
+</div> 
+<h2><span class="editsection">[<a href="/w/index.php?title=Haskell&amp;action=edit&amp;section=16" title="Править секцию: Приложения, написанные на языке Haskell">править</a>]</span> <span class="mw-headline" id=".D0.9F.D1.80.D0.B8.D0.BB.D0.BE.D0.B6.D0.B5.D0.BD.D0.B8.D1.8F.2C_.D0.BD.D0.B0.D0.BF.D0.B8.D1.81.D0.B0.D0.BD.D0.BD.D1.8B.D0.B5_.D0.BD.D0.B0_.D1.8F.D0.B7.D1.8B.D0.BA.D0.B5_Haskell">Приложения, написанные на языке Haskell</span></h2> 
+<p>Мозаичный оконный менеджер <a href="/wiki/Xmonad" title="Xmonad">Xmonad</a> для X Window System целиком написан на Хаскеле. <a href="/wiki/Darcs" title="Darcs">Darcs</a> — распределённая система управления версиями с рядом уникальных возможностей — написана на Хаскеле. Первая реализация компилятора и интерпретатора языка Perl&#160;6, Pugs, была написана на Хаскеле за несколько месяцев. Компилятор GHC часто выступает экспериментальной площадкой для проверки новых возможностей функционального программирования и оптимизации.</p> 
+<h3><span class="editsection">[<a href="/w/index.php?title=Haskell&amp;action=edit&amp;section=17" title="Править секцию: Проприетарные приложения">править</a>]</span> <span class="mw-headline" id=".D0.9F.D1.80.D0.BE.D0.BF.D1.80.D0.B8.D0.B5.D1.82.D0.B0.D1.80.D0.BD.D1.8B.D0.B5_.D0.BF.D1.80.D0.B8.D0.BB.D0.BE.D0.B6.D0.B5.D0.BD.D0.B8.D1.8F">Проприетарные приложения</span></h3> 
+<p>Хаскель всё чаще используется в коммерческой среде<sup id="cite_ref-9" class="reference"><a href="#cite_note-9">[10]</a></sup>. Этому способствует и принятая в сообществе традиция выпускать библиотеки под либеральными лицензиями (более 70% свободно доступных библиотек распространяются на условиях лицензий BSD, MIT или являются общественным достоянием).</p> 
+<p>Вот примеры некоторых коммерческих приложений, написанных на Хаскеле: Bluespec SystemVerilog, язык проектирования и верификации полупроводниковых схем, является расширением Хаскеля<sup id="cite_ref-10" class="reference"><a href="#cite_note-10">[11]</a></sup>. Cryptol, коммерческий язык для разработки и проверки криптографических алгоритмов, реализован на Хаскеле. Примечательно, что первое формально верифицированное микроядро <a href="http://en.wikipedia.org/wiki/SeL4#Current_research_and_development" class="extiw" title="en:SeL4">seL4</a> было тоже написано на Хаскеле.</p> 
+<p>Активно применяется Хаскель в области финансового программирования, анализа рисков, в системах поддержки решений. Хаскель применяют разработчики генератора городских ландшафтов для игр и моделирования <a href="http://gamr7.com/" class="external text" rel="nofollow">Gamr7</a>. Есть примеры успешного применения Хаскеля для разработки частных информационных систем в коммерческих организациях, как в мире, так и в странах СНГ<sup id="cite_ref-11" class="reference"><a href="#cite_note-11">[12]</a></sup>.</p> 
+<h3><span class="editsection">[<a href="/w/index.php?title=Haskell&amp;action=edit&amp;section=18" title="Править секцию: Приложения с открытым исходным кодом">править</a>]</span> <span class="mw-headline" id=".D0.9F.D1.80.D0.B8.D0.BB.D0.BE.D0.B6.D0.B5.D0.BD.D0.B8.D1.8F_.D1.81_.D0.BE.D1.82.D0.BA.D1.80.D1.8B.D1.82.D1.8B.D0.BC_.D0.B8.D1.81.D1.85.D0.BE.D0.B4.D0.BD.D1.8B.D0.BC_.D0.BA.D0.BE.D0.B4.D0.BE.D0.BC">Приложения с открытым исходным кодом</span></h3> 
+<p>Также на Хаскеле написано много приложений c <a href="/wiki/%D0%9E%D1%82%D0%BA%D1%80%D1%8B%D1%82%D0%BE%D0%B5_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%BD%D0%BE%D0%B5_%D0%BE%D0%B1%D0%B5%D1%81%D0%BF%D0%B5%D1%87%D0%B5%D0%BD%D0%B8%D0%B5" title="Открытое программное обеспечение">открытым исходным кодом</a>. Большинство из них доступны в архиве Hackage. Вот некоторые из них:</p> 
+<h4><span class="editsection">[<a href="/w/index.php?title=Haskell&amp;action=edit&amp;section=19" title="Править секцию: Базы данных">править</a>]</span> <span class="mw-headline" id=".D0.91.D0.B0.D0.B7.D1.8B_.D0.B4.D0.B0.D0.BD.D0.BD.D1.8B.D1.85">Базы данных</span></h4> 
+<p>Более полный список см. в <a href="http://hackage.haskell.org/packages/archive/pkg-list.html#cat:database" class="external text" rel="nofollow">Hackage:Databases</a></p> 
+<ul> 
+<li><a href="http://hackage.haskell.org/package/haskelldb" class="external text" rel="nofollow">haskelldb</a> — строго типизированный интерфейс доступа к SQL-базам данных</li> 
+<li><a href="http://hackage.haskell.org/package/HDBC" class="external text" rel="nofollow">HDBC</a> — универсальный интерфейс доступа к реляционным базам данных (поддерживаются SQLite, MySQL, PostgreSQL, ODBC)</li> 
+<li><a href="http://hackage.haskell.org/package/Takusen" class="external text" rel="nofollow">Takusen</a> — библиотека доступа к базам данных, использующая интерфейс <a href="/w/index.php?title=%D0%A1%D0%B2%D1%91%D1%80%D1%82%D0%BA%D0%B0_(%D0%B8%D0%BD%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%82%D0%B8%D0%BA%D0%B0)&amp;action=edit&amp;redlink=1" class="new" title="Свёртка (информатика) (страница отсутствует)">левой свёртки</a></li> 
+<li>есть библиотеки для работы с BerkleyDB, CouchDB, MongoDB, Redis, TokyoCabinet/TokyoTyrant, SimpleDB, SQLite</li> 
+</ul> 
+<h4><span class="editsection">[<a href="/w/index.php?title=Haskell&amp;action=edit&amp;section=20" title="Править секцию: Графика">править</a>]</span> <span class="mw-headline" id=".D0.93.D1.80.D0.B0.D1.84.D0.B8.D0.BA.D0.B0">Графика</span></h4> 
+<p>Более полный список см. в <a href="http://hackage.haskell.org/packages/archive/pkg-list.html#cat:graphics" class="external text" rel="nofollow">Hackage:Graphics</a>.</p> 
+<ul> 
+<li><a href="http://www.cs.york.ac.uk/fp/darcs/Blobs/" class="external text" rel="nofollow">Blobs</a> — редактор диаграмм</li> 
+<li><a href="http://code.haskell.org/diagrams/" class="external text" rel="nofollow">Diagrams</a> — библиотека для программирования схем и диаграмм</li> 
+<li><a href="http://hackage.haskell.org/package/FieldTrip-0.2.7" class="external text" rel="nofollow">FieldTrip</a> — библиотека для функционального описания 3D-объектов</li> 
+<li><a href="http://haskell.org/haskellwiki/Glome" class="external text" rel="nofollow">Glome</a> — один из множества трассировщиков лучей на Хаскеле</li> 
+<li><a href="http://hackage.haskell.org/package/GLUT" class="external text" rel="nofollow">GLUT</a> и <a href="http://hackage.haskell.org/package/OpenGL" class="external text" rel="nofollow">OpenGL</a> — интерфейсы для использования GLUT и <a href="/wiki/OpenGL" title="OpenGL">OpenGL</a> из Хаскеля</li> 
+<li><a href="http://haskell.org/haskellwiki/GPipe" class="external text" rel="nofollow">GPipe</a> — функциональный интерфейс для программирования GPU</li> 
+<li><a href="http://haskell.org/haskellwiki/Grapefruit" class="external text" rel="nofollow">Grapefruit</a> — библиотека для функционального <a href="/wiki/%D0%A0%D0%B5%D0%B0%D0%BA%D1%82%D0%B8%D0%B2%D0%BD%D0%BE%D0%B5_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5" title="Реактивное программирование">реактивного программирования</a> графики и интерфейсов</li> 
+<li><a href="http://haskell.org/haven/" class="external text" rel="nofollow">Haven</a> — библиотека отрисовки масштабируемой векторной графики</li> 
+<li><a href="http://dockerz.net/twd/HaskellCharts" class="external text" rel="nofollow">HaskellCharts</a> — библиотека для отрисовки двумерных графиков</li> 
+<li><a href="http://hackage.haskell.org/package/SDL" class="external text" rel="nofollow">SDL</a> — интерфейс для использования libSDL из Хаскеля</li> 
+<li><a href="http://www.haskell.org/yampa/" class="external text" rel="nofollow">Yampa</a> — библиотека для функционального <a href="/wiki/%D0%A0%D0%B5%D0%B0%D0%BA%D1%82%D0%B8%D0%B2%D0%BD%D0%BE%D0%B5_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5" title="Реактивное программирование">реактивного программирования</a> с помощью стрелок</li> 
+</ul> 
+<h4><span class="editsection">[<a href="/w/index.php?title=Haskell&amp;action=edit&amp;section=21" title="Править секцию: Графические интерфейсы">править</a>]</span> <span class="mw-headline" id=".D0.93.D1.80.D0.B0.D1.84.D0.B8.D1.87.D0.B5.D1.81.D0.BA.D0.B8.D0.B5_.D0.B8.D0.BD.D1.82.D0.B5.D1.80.D1.84.D0.B5.D0.B9.D1.81.D1.8B">Графические интерфейсы</span></h4> 
+<p>Более полный список см. в <a href="http://hackage.haskell.org/packages/archive/pkg-list.html#cat:gui" class="external text" rel="nofollow">Hackage:GUI</a>.</p> 
+<ul> 
+<li><a href="http://www.haskell.org/gtk2hs/" class="external text" rel="nofollow">Gtk2Hs</a> — библиотека для создания графических интерфейсов на основе GTK+</li> 
+<li><a href="http://haskell.org/haskellwiki/Grapefruit" class="external text" rel="nofollow">Grapefruit</a> и <a href="http://hackage.haskell.org/package/wxFruit" class="external text" rel="nofollow">wxFruit</a> — библиотеки декларативного программирования интерфейсов (на основе <a href="/wiki/%D0%A0%D0%B5%D0%B0%D0%BA%D1%82%D0%B8%D0%B2%D0%BD%D0%BE%D0%B5_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5" title="Реактивное программирование">реактивного программирования</a>)</li> 
+<li><a href="http://qthaskell.berlios.de/" class="external text" rel="nofollow">qtHaskell</a> — библиотека для создания графических интерфейсов на основе Qt</li> 
+<li><a href="http://haskell.org/haskellwiki/WxHaskell" class="external text" rel="nofollow">wxHaskell</a> — библиотека для создания графических интерфейсов на основе wxWidgets</li> 
+</ul> 
+<h4><span class="editsection">[<a href="/w/index.php?title=Haskell&amp;action=edit&amp;section=22" title="Править секцию: Игры">править</a>]</span> <span class="mw-headline" id=".D0.98.D0.B3.D1.80.D1.8B">Игры</span></h4> 
+<p>Более полный список см. в <a href="http://hackage.haskell.org/packages/archive/pkg-list.html#cat:game" class="external text" rel="nofollow">Hackage:Games</a>.</p> 
+<ul> 
+<li><a href="http://hackage.haskell.org/package/bloxorz" class="external text" rel="nofollow">bloxorz</a> — трёхмерная логическая игра</li> 
+<li><a href="http://hackage.haskell.org/package/frag" class="external text" rel="nofollow">Frag</a> — <a href="/wiki/3D-%D1%88%D1%83%D1%82%D0%B5%D1%80" title="3D-шутер">трёхмерный шутер</a> от первого лица</li> 
+<li><a href="http://hackage.haskell.org/package/Monadius" class="external text" rel="nofollow">monadius</a> — двумерный <a href="/wiki/%D0%90%D1%80%D0%BA%D0%B0%D0%B4%D0%B0_(%D0%B8%D0%B3%D1%80%D0%B0)" title="Аркада (игра)">скроллер</a></li> 
+<li><a href="http://raincat.bysusanlin.com/" class="external text" rel="nofollow">Raincat</a> — рисованная игра-головоломка</li> 
+</ul> 
+<h4><span class="editsection">[<a href="/w/index.php?title=Haskell&amp;action=edit&amp;section=23" title="Править секцию: Интернет">править</a>]</span> <span class="mw-headline" id=".D0.98.D0.BD.D1.82.D0.B5.D1.80.D0.BD.D0.B5.D1.82">Интернет</span></h4> 
+<p>Более полный список см. в <a href="http://hackage.haskell.org/packages/archive/pkg-list.html#cat:network" class="external text" rel="nofollow">Hackage:Network</a></p> 
+<ul> 
+<li><a href="http://gitit.net/" class="external text" rel="nofollow">gitit</a> – вики-платформа, основанная на системах контроля версиями (darcs, git или mercurial)</li> 
+<li><a href="http://happstack.com/" class="external text" rel="nofollow">happstack</a> — фреймворк для веб-программирования (аналог Django или Ruby on Rails)</li> 
+<li><a href="/wiki/Twidge" title="Twidge">Twidge</a> — <a href="/wiki/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D1%84%D0%B5%D0%B9%D1%81_%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D0%BD%D0%BE%D0%B9_%D1%81%D1%82%D1%80%D0%BE%D0%BA%D0%B8" title="Интерфейс командной строки">терминальный</a> клиент для <a href="/wiki/%D0%9C%D0%B8%D0%BA%D1%80%D0%BE%D0%B1%D0%BB%D0%BE%D0%B3%D0%B3%D0%B8%D0%BD%D0%B3" title="Микроблоггинг">микроблоггинга</a></li> 
+</ul> 
+<h4><span class="editsection">[<a href="/w/index.php?title=Haskell&amp;action=edit&amp;section=24" title="Править секцию: Обработка текста">править</a>]</span> <span class="mw-headline" id=".D0.9E.D0.B1.D1.80.D0.B0.D0.B1.D0.BE.D1.82.D0.BA.D0.B0_.D1.82.D0.B5.D0.BA.D1.81.D1.82.D0.B0">Обработка текста</span></h4> 
+<p>Более полный список см. в <a href="http://hackage.haskell.org/packages/archive/pkg-list.html#cat:text" class="external text" rel="nofollow">Hackage:Text</a></p> 
+<ul> 
+<li><a href="http://hackage.haskell.org/package/HaXml" class="external text" rel="nofollow">HaXml</a> — многофункциональная библиотека для работы с XML</li> 
+<li><a href="http://www.haskell.org/haskellwiki/HXT" class="external text" rel="nofollow">HXT</a> — комбинаторная библиотека для работы с XML, использующая выразительный <a href="/wiki/%D0%9F%D1%80%D0%B5%D0%B4%D0%BC%D0%B5%D1%82%D0%BD%D0%BE-%D0%BE%D1%80%D0%B8%D0%B5%D0%BD%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D1%8B%D0%B9_%D1%8F%D0%B7%D1%8B%D0%BA_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F" title="Предметно-ориентированный язык программирования">предметно-ориентированный язык</a>, основанный на <a href="http://en.wikipedia.org/wiki/Arrow_(functional_programming)" class="extiw" title="en:Arrow (functional programming)">стрелках</a></li> 
+<li><a href="http://en.wikipedia.org/wiki/Leksah" class="extiw" title="en:Leksah">Leksah</a> <a href="http://leksah.org/screenshots.html" class="external autonumber" rel="nofollow">[1]</a> – интегрированная среда разработки (IDE), написанная на Хаскеле и, в основном, для разработки на Хаскеле; поддерживает навигацию по исходным текстом, «умное» автодополнение, отладку и сборку пакетов.</li> 
+<li><a href="/wiki/Pandoc" title="Pandoc">Pandoc</a> – универсальный конвертер текста между различными языками разметки</li> 
+<li><a href="http://www.haskell.org/haskellwiki/Parsec" class="external text" rel="nofollow">Parsec</a> — комбинаторная библиотека для синтаксического анализа</li> 
+<li><a href="http://www.grammaticalframework.org/" class="external text" rel="nofollow">The Grammatical Framework</a> — библиотека для работы с текстом на <a href="/wiki/%D0%9E%D0%B1%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B0_%D0%B5%D1%81%D1%82%D0%B5%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D0%BE%D0%B3%D0%BE_%D1%8F%D0%B7%D1%8B%D0%BA%D0%B0" title="Обработка естественного языка">естественных языках</a></li> 
+<li><a href="/w/index.php?title=Yi&amp;action=edit&amp;redlink=1" class="new" title="Yi (страница отсутствует)">Yi</a> – подобный <a href="/wiki/Emacs" title="Emacs">Emacs</a>-у текстовый редактор, использует Хаскель также и в качестве скриптового языка</li> 
+</ul> 
+<h4><span class="editsection">[<a href="/w/index.php?title=Haskell&amp;action=edit&amp;section=25" title="Править секцию: Параллельное, многозадачное и многопоточное программирование">править</a>]</span> <span class="mw-headline" id=".D0.9F.D0.B0.D1.80.D0.B0.D0.BB.D0.BB.D0.B5.D0.BB.D1.8C.D0.BD.D0.BE.D0.B5.2C_.D0.BC.D0.BD.D0.BE.D0.B3.D0.BE.D0.B7.D0.B0.D0.B4.D0.B0.D1.87.D0.BD.D0.BE.D0.B5_.D0.B8_.D0.BC.D0.BD.D0.BE.D0.B3.D0.BE.D0.BF.D0.BE.D1.82.D0.BE.D1.87.D0.BD.D0.BE.D0.B5_.D0.BF.D1.80.D0.BE.D0.B3.D1.80.D0.B0.D0.BC.D0.BC.D0.B8.D1.80.D0.BE.D0.B2.D0.B0.D0.BD.D0.B8.D0.B5">Параллельное, многозадачное и многопоточное программирование</span></h4> 
+<ul> 
+<li><a href="http://www.cs.kent.ac.uk/projects/ofa/chp/" class="external text" rel="nofollow">CHP</a> — Communicating Haskell Processes, библиотека, реализующая модель параллельных процессов без общей памяти</li> 
+<li><a href="http://www.haskell.org/haskellwiki/GHC/Data_Parallel_Haskell" class="external text" rel="nofollow">Data Parallel Haskell</a> — расширение языка, обеспечивающие параллелизм данных на многоядерных процессорах</li> 
+<li><a href="http://hackage.haskell.org/package/parallel" class="external text" rel="nofollow">parallel</a> — стандартная библиотека для параллельного программирования</li> 
+<li><a href="http://hackage.haskell.org/package/stm" class="external text" rel="nofollow">STM</a> — библиотека реализующая <a href="http://en.wikipedia.org/wiki/Software_Transactional_Memory" class="extiw" title="en:Software Transactional Memory">Software Transactional Memory</a></li> 
+</ul> 
+<h4><span class="editsection">[<a href="/w/index.php?title=Haskell&amp;action=edit&amp;section=26" title="Править секцию: Разработка">править</a>]</span> <span class="mw-headline" id=".D0.A0.D0.B0.D0.B7.D1.80.D0.B0.D0.B1.D0.BE.D1.82.D0.BA.D0.B0">Разработка</span></h4> 
+<p>Более полный список см. в <a href="http://hackage.haskell.org/packages/archive/pkg-list.html#cat:development" class="external text" rel="nofollow">Hackage:Development</a></p> 
+<ul> 
+<li><a href="http://haskell.org/alex" class="external text" rel="nofollow">alex</a> — генератор <a href="/wiki/%D0%9B%D0%B5%D0%BA%D1%81%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D0%B0%D0%BD%D0%B0%D0%BB%D0%B8%D0%B7" title="Лексический анализ">лексических анализаторов</a></li> 
+<li>cabal-install — инструмент для сетевой установки, автоматической сборки и развёртывания приложений на Haskell</li> 
+<li><a href="http://haskell.org/happy" class="external text" rel="nofollow">happy</a> — генератор <a href="/wiki/%D0%A1%D0%B8%D0%BD%D1%82%D0%B0%D0%BA%D1%81%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D0%B0%D0%BD%D0%B0%D0%BB%D0%B8%D0%B7" title="Синтаксический анализ">синтаксических анализаторов</a></li> 
+<li><a href="http://haskell.org/haddock" class="external text" rel="nofollow">haddock</a> – инструмент автоматической генерации документации для библиотек Haskell</li> 
+<li><a href="http://hackage.haskell.org/package/HUnit" class="external text" rel="nofollow">HUnit</a> — библиотека для <a href="/wiki/%D0%9C%D0%BE%D0%B4%D1%83%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5_%D1%82%D0%B5%D1%81%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5" title="Модульное тестирование">модульного тестирования</a></li> 
+<li><a href="http://hackage.haskell.org/package/QuickCheck" class="external text" rel="nofollow">QuickCheck</a> — библиотека для автоматического тестирования</li> 
+</ul> 
+<h4><span class="editsection">[<a href="/w/index.php?title=Haskell&amp;action=edit&amp;section=27" title="Править секцию: Системные программы">править</a>]</span> <span class="mw-headline" id=".D0.A1.D0.B8.D1.81.D1.82.D0.B5.D0.BC.D0.BD.D1.8B.D0.B5_.D0.BF.D1.80.D0.BE.D0.B3.D1.80.D0.B0.D0.BC.D0.BC.D1.8B">Системные программы</span></h4> 
+<p>Более полный список см. в <a href="http://hackage.haskell.org/packages/archive/pkg-list.html#cat:system" class="external text" rel="nofollow">Hackage:System</a></p> 
+<ul> 
+<li><a href="/wiki/Darcs" title="Darcs">Darcs</a> — продвинутая распределённая система контроля версий</li> 
+<li><a href="/w/index.php?title=House_(%D0%BE%D0%BF%D0%B5%D1%80%D0%B0%D1%86%D0%B8%D0%BE%D0%BD%D0%BD%D0%B0%D1%8F_%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0)&amp;action=edit&amp;redlink=1" class="new" title="House (операционная система) (страница отсутствует)">House</a> – операционная система, написанная на Хаскеле</li> 
+<li><a href="/wiki/Xmonad" title="Xmonad">Xmonad</a> — популярный мозаичный менеджер окон</li> 
+</ul> 
+<h4><span class="editsection">[<a href="/w/index.php?title=Haskell&amp;action=edit&amp;section=28" title="Править секцию: Языки и компиляторы">править</a>]</span> <span class="mw-headline" id=".D0.AF.D0.B7.D1.8B.D0.BA.D0.B8_.D0.B8_.D0.BA.D0.BE.D0.BC.D0.BF.D0.B8.D0.BB.D1.8F.D1.82.D0.BE.D1.80.D1.8B">Языки и компиляторы</span></h4> 
+<p>Более полный список см. в <a href="http://hackage.haskell.org/packages/archive/pkg-list.html#cat:language" class="external text" rel="nofollow">Hackage:Language</a></p> 
+<ul> 
+<li><a href="http://en.wikipedia.org/wiki/Agda_(theorem_prover)" class="extiw" title="en:Agda (theorem prover)">Agda</a> – язык программирования с зависимыми <a href="/wiki/%D0%A2%D0%B8%D0%BF_%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85" title="Тип данных" class="mw-redirect">типами</a> и <a href="/wiki/%D0%90%D0%B2%D1%82%D0%BE%D0%BC%D0%B0%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%BE%D0%B5_%D0%B4%D0%BE%D0%BA%D0%B0%D0%B7%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D1%81%D1%82%D0%B2%D0%BE_%D1%82%D0%B5%D0%BE%D1%80%D0%B5%D0%BC" title="Автоматическое доказательство теорем">доказатель теорем</a></li> 
+<li><a href="http://hackage.haskell.org/package/curry-frontend" class="external text" rel="nofollow">Curry</a> — функциональный логический язык <a href="/wiki/Curry" title="Curry">Curry</a></li> 
+<li>cpphs – реализация препроцессора языка Си</li> 
+<li><a href="http://en.wikipedia.org/wiki/Epigram_(programming_language)" class="extiw" title="en:Epigram (programming language)">Epigram</a> — язык программирования с зависимыми типами</li> 
+<li><a href="http://www.flapjax-lang.org/" class="external text" rel="nofollow">Flapjax</a> — язык для <a href="/wiki/%D0%A0%D0%B5%D0%B0%D0%BA%D1%82%D0%B8%D0%B2%D0%BD%D0%BE%D0%B5_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5" title="Реактивное программирование">реактивного программирования</a> веб-приложений</li> 
+<li><a href="http://hackage.haskell.org/package/language-python" class="external text" rel="nofollow">Language.Python</a> — библиотека лексического и синтаксического анализа кода на языке Python</li> 
+<li><a href="http://hackage.haskell.org/package/language-c" class="external text" rel="nofollow">Language.C</a> — библиотека анализа и генерации кода на языке Си</li> 
+<li><a href="http://hackage.haskell.org/package/chalmers-lava2000" class="external text" rel="nofollow">Lava</a> — язык аппаратных схем</li> 
+<li><a href="http://hackage.haskell.org/package/llvm" class="external text" rel="nofollow">llvm</a> — интерфейс для работы с <a href="/wiki/LLVM" title="LLVM" class="mw-redirect">LLVM</a> из Хаскеля</li> 
+<li><a href="http://www.pugscode.org/" class="external text" rel="nofollow">Pugs</a> — компилятор и интерпретатор языка <a href="/wiki/Perl_6" title="Perl 6">Perl 6</a></li> 
+<li><a href="http://hackage.haskell.org/package/WebBits" class="external text" rel="nofollow">WebBits</a> — библиотека для работы с кодом на языке Javascript</li> 
+</ul> 
+<h2><span class="editsection">[<a href="/w/index.php?title=Haskell&amp;action=edit&amp;section=29" title="Править секцию: См. также">править</a>]</span> <span class="mw-headline" id=".D0.A1.D0.BC._.D1.82.D0.B0.D0.BA.D0.B6.D0.B5">См. также</span></h2> 
+<ul> 
+<li>Сравнение возможностей Haskell с другими языками см. в статье <a href="/wiki/%D0%A1%D1%80%D0%B0%D0%B2%D0%BD%D0%B5%D0%BD%D0%B8%D0%B5_%D1%8F%D0%B7%D1%8B%D0%BA%D0%BE%D0%B2_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F" title="Сравнение языков программирования">Сравнение языков программирования</a></li> 
+</ul> 
+<h2><span class="editsection">[<a href="/w/index.php?title=Haskell&amp;action=edit&amp;section=30" title="Править секцию: Примечания">править</a>]</span> <span class="mw-headline" id=".D0.9F.D1.80.D0.B8.D0.BC.D0.B5.D1.87.D0.B0.D0.BD.D0.B8.D1.8F">Примечания</span></h2> 
+<div class="references-small" style=""> 
+<ol class="references"> 
+<li id="cite_note-0"><b><a href="#cite_ref-0">↑</a></b> <cite id="CITEREFCurry1934">Curry, Haskell (1934), "Functionality in Combinatory Logic", <i>Proceedings of the National Academy of Sciences</i>, vol. 20, pp. 584–590</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.atitle=Functionality+in+Combinatory+Logic&amp;rft.title=Proceedings+of+the+National+Academy+of+Sciences&amp;rft.aulast=Curry&amp;rft.aufirst=Haskell&amp;rft.date=1934&amp;rft.volume=20&amp;rft.pages=pp.+584%E2%80%93590"><span style="display: none;">&#160;</span></span></li> 
+<li id="cite_note-1"><b><a href="#cite_ref-1">↑</a></b> <cite id="CurryFeys_paragraph9E"><cite id="CITEREFCurryFeys1958">Curry, Haskell B. &amp; Feys, Robert (1958), <i>Combinatory Logic Vol. I</i>, Amsterdam: North-Holland</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.title=Combinatory+Logic+Vol.+I&amp;rft.aulast=Curry&amp;rft.aufirst=Haskell+B.&amp;rft.date=1958&amp;rft.place=Amsterdam&amp;rft.place=Amsterdam&amp;rft.pub=North-Holland"><span style="display: none;">&#160;</span></span>, with 2 sections by William Craig, see paragraph 9E</cite></li> 
+<li id="cite_note-2"><b><a href="#cite_ref-2">↑</a></b> <a href="http://haskell.org/" class="external text" rel="nofollow">HaskellWiki</a> — по состоянию на 05.02.2010.</li> 
+<li id="cite_note-3"><b><a href="#cite_ref-3">↑</a></b> <a href="http://www.haskell.org/onlinereport/" class="external text" rel="nofollow">The Haskell 98 Language Report</a> — получено 05.02.2010</li> 
+<li id="cite_note-4"><b><a href="#cite_ref-4">↑</a></b> <a href="http://hackage.haskell.org/trac/haskell-prime/" class="external text" rel="nofollow">Haskell Prime</a></li> 
+<li id="cite_note-5"><b><a href="#cite_ref-5">↑</a></b> <a href="http://www.haskell.org/pipermail/haskell/2009-November/021750.html" class="external text" rel="nofollow">Simon Marlow, Announcing Haskell 2010</a></li> 
+<li id="cite_note-6"><b><a href="#cite_ref-6">↑</a></b> <a href="http://www.haskell.org/haskellwiki/Implementations" class="external text" rel="nofollow">Реализации языка Хаскель (англ.)</a></li> 
+<li id="cite_note-7"><b><a href="#cite_ref-7">↑</a></b> <a href="http://www.haskell.org/pipermail/cvs-ghc/2010-February/052606.html" class="external text" rel="nofollow">Merge Request: LLVM Code Generator for GHC</a></li> 
+<li id="cite_note-8"><b><a href="#cite_ref-8">↑</a></b> <a href="http://donsbot.wordpress.com/2010/02/21/smoking-fast-haskell-code-using-ghcs-new-llvm-codegen/" class="external text" rel="nofollow">Smoking fast Haskell code using GHC’s new LLVM codegen</a></li> 
+<li id="cite_note-9"><b><a href="#cite_ref-9">↑</a></b> <span class="ref-info" title="на английском языке" style="font-size:85%; cursor:help; margin-left:0.2em; color:#888;">(англ.)</span><a href="http://www.haskell.org/haskellwiki/Haskell_in_industry" class="external text" rel="nofollow">Коммерческие применения языка Хаскель</a></li> 
+<li id="cite_note-10"><b><a href="#cite_ref-10">↑</a></b> <a href="http://homepages.inf.ed.ac.uk/wadler/realworld/bluespec.html" class="external text" rel="nofollow">Bluespec</a></li> 
+<li id="cite_note-11"><b><a href="#cite_ref-11">↑</a></b> <i>Астапов Дмитрий</i>&#160;<a href="http://fprog.ru/2009/issue2/" class="external text" rel="nofollow">Использование Haskell при поддержке критически важной для бизнеса информационной системы</a> // <i>Практика функционального программирования</i> : Журнал. — 2009. — №&#160;2. — С.&#160;53—69.</li> 
+</ol> 
+</div> 
+<h2><span class="editsection">[<a href="/w/index.php?title=Haskell&amp;action=edit&amp;section=31" title="Править секцию: Литература">править</a>]</span> <span class="mw-headline" id=".D0.9B.D0.B8.D1.82.D0.B5.D1.80.D0.B0.D1.82.D1.83.D1.80.D0.B0">Литература</span></h2> 
+<ul> 
+<li><i>Bryan O’Sullivan, John Goerzen, Don Stewart</i>. Real World Haskell — O’Reilly, 2008—710 C. <a href="/wiki/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:BookSources/0596514980" class="internal mw-magiclink-isbn">ISBN 0-596-51498-0</a>. <a href="/wiki/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:BookSources/9780596514983" class="internal mw-magiclink-isbn">ISBN 978-0-596-51498-3</a></li> 
+<li><i>Душкин Роман Викторович</i> Функциональное программирование на языке Haskell / Гл. ред. Д. А. Мовчан;. — М.: ДМК Пресс,, 2008. — 544 с., ил.&#160;с. — <span style="white-space: nowrap;">1500 экз</span>. — <a href="/wiki/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:BookSources/5940743358" class="internal mw-magiclink-isbn">ISBN 5-94074-335-8</a></li> 
+</ul> 
+<ul> 
+<li><i>Graham Hutton</i>. «Programming in Haskell». Cambrige University Press. <a href="/wiki/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:BookSources/9780521871723" class="internal mw-magiclink-isbn">ISBN 978-0-521-87172-3</a>. <a href="/wiki/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:BookSources/9780521692694" class="internal mw-magiclink-isbn">ISBN 978-0-521-69269-4</a></li> 
+<li><i>Kees Doets, Jan van Eijck</i>. «The Haskell Road to Logic, Maths and Programming». <a href="/wiki/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:BookSources/0954300696" class="internal mw-magiclink-isbn">ISBN 0-9543006-9-6</a>.</li> 
+</ul> 
+<h2><span class="editsection">[<a href="/w/index.php?title=Haskell&amp;action=edit&amp;section=32" title="Править секцию: Ссылки">править</a>]</span> <span class="mw-headline" id=".D0.A1.D1.81.D1.8B.D0.BB.D0.BA.D0.B8">Ссылки</span></h2> 
+<div class="infobox sisterproject noprint plainlinks" style="width:auto;"> 
+<div class="floatleft"><a href="/wiki/%D0%A4%D0%B0%D0%B9%D0%BB:Wikibooks-logo.svg" class="image" title="Логотип Викиучебника"><img alt="Логотип Викиучебника" src="http://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wikibooks-logo.svg/40px-Wikibooks-logo.svg.png" width="40" height="40" /></a></div> 
+Имеется <a href="/wiki/%D0%92%D0%B8%D0%BA%D0%B8%D1%83%D1%87%D0%B5%D0%B1%D0%BD%D0%B8%D0%BA" title="Викиучебник">викиучебник</a> по&#160;теме<br /> 
+<b>«<a href="http://ru.wikibooks.org/wiki/%D0%AF%D0%B7%D1%8B%D0%BA_Haskell:_%D0%9E_%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%B5_%D0%B8_%D0%B2%D1%80%D0%B5%D0%B4%D0%B5_%D0%BB%D0%B5%D0%BD%D0%B8" class="extiw" title="b:Язык Haskell: О пользе и вреде лени">Haskell</a>»</b></div> 
+<ul> 
+<li><a href="http://www.haskell.org/" class="external free" rel="nofollow">http://www.haskell.org/</a> — Сайт, посвящённый функциональному программированию в общем и языку Haskell в частности. Содержит различные справочные материалы, список интерпретаторов и компиляторов Haskell’а (в настоящий момент, все интерпретаторы и компиляторы бесплатны). Кроме того, имеется обширный список ссылок на ресурсы по теории функционального программирования и другим языкам (<a href="/wiki/Standard_ML" title="Standard ML" class="mw-redirect">Standard ML</a>, <a href="/wiki/Clean" title="Clean">Clean</a>).</li> 
+<li><a href="http://www.haskell.ru/" class="external free" rel="nofollow">http://www.haskell.ru/</a> — Полный перевод описания языка Haskell на <a href="/wiki/%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B9_%D1%8F%D0%B7%D1%8B%D0%BA" title="Русский язык">русский язык</a>.</li> 
+<li><a href="http://www.roman-dushkin.narod.ru/fp.html" class="external free" rel="nofollow">http://www.roman-dushkin.narod.ru/fp.html</a> — Курс лекций по функциональному программированию, читаемый в <a href="/wiki/%D0%9C%D0%98%D0%A4%D0%98" title="МИФИ" class="mw-redirect">МИФИ</a> с 2001 года.</li> 
+<li><a href="http://kchri.narod.ru" class="external free" rel="nofollow">http://kchri.narod.ru</a> — Курс лекций и лабораторные работы на Haskell</li> 
+<li><a href="http://www.rsdn.ru/article/haskell/haskell_part1.xml" class="external text" rel="nofollow">Мягкое введение в Haskell</a>, <a href="http://www.rsdn.ru/article/haskell/haskell_part2.xml" class="external text" rel="nofollow">часть 2</a></li> 
+<li><a href="http://www.rsdn.ru/article/haskell/typesH.xml" class="external text" rel="nofollow">Функциональные типы и композиция функций в Хаскелле</a></li> 
+<li>ЖЖ-сообщества: <a href="http://community.livejournal.com/ru_lambda" class="external text" rel="nofollow">ru_lambda</a> и <a href="http://community.livejournal.com/ru_declarative" class="external text" rel="nofollow">ru_declarative</a></li> 
+<li><a href="http://spbhug.folding-maps.org" class="external text" rel="nofollow">Санкт-Петербургская группа пользователей Haskell</a></li> 
+<li><a href="http://eclipsefp.sourceforge.net/" class="external free" rel="nofollow">http://eclipsefp.sourceforge.net/</a> — Расширение <a href="/wiki/%D0%A1%D1%80%D0%B5%D0%B4%D0%B0_%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B8_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%BD%D0%BE%D0%B3%D0%BE_%D0%BE%D0%B1%D0%B5%D1%81%D0%BF%D0%B5%D1%87%D0%B5%D0%BD%D0%B8%D1%8F" title="Среда разработки программного обеспечения" class="mw-redirect">среды разработки</a> <a href="/wiki/Eclipse_(%D1%81%D1%80%D0%B5%D0%B4%D0%B0_%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B8)" title="Eclipse (среда разработки)">Eclipse</a> для программирования на Haskell</li> 
+<li><a href="http://www.developers.org.ua/archives/adept/2007/04/24/fp-lazy-evaluation/" class="external text" rel="nofollow">ФП: lazy evaluation — это завтрашние результаты вычисления функций уже сегодня</a></li> 
+<li><a href="http://www.willamette.edu/~fruehr/haskell/evolution.html" class="external text" rel="nofollow">Набор вариантов кода для вычисления факториала на языке Haskell</a></li> 
+</ul> 
+<p><br clear="all" /></p> 
+<center> 
+<div style="clear:both;" class="NavFrame"> 
+<div class="NavHead" style="background-color:#ccccff;"><b>Трансляторы языка <strong class="selflink">Haskell</strong></b> &#160;</div> 
+<div class="NavContent" style="font-size:90%;"> 
+<table align="center" class="toccolours" cellspacing="0" width="50%"> 
+<tr> 
+<td width="50%" align="center" style="vertical-align: top; border-right: 1px solid #ccccff"> 
+<p><i><a href="/wiki/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BF%D1%80%D0%B5%D1%82%D0%B0%D1%82%D0%BE%D1%80" title="Интерпретатор">Интерпретаторы</a>:</i> <a href="/w/index.php?title=Chalmer%27s_Haskell_Interpreter&amp;action=edit&amp;redlink=1" class="new" title="Chalmer's Haskell Interpreter (страница отсутствует)">HBI</a> | <a href="/wiki/HUGS" title="HUGS">HUGS</a></p> 
+</td> 
+<td width="50%" align="center" style="vertical-align: top"> 
+<p><i><a href="/wiki/%D0%9A%D0%BE%D0%BC%D0%BF%D0%B8%D0%BB%D1%8F%D1%82%D0%BE%D1%80" title="Компилятор">Компиляторы</a>:</i> <a href="/wiki/Glasgow_Haskell_Compiler" title="Glasgow Haskell Compiler">GHC</a> | <a href="/w/index.php?title=Chalmer%27s_Haskell_compiler&amp;action=edit&amp;redlink=1" class="new" title="Chalmer's Haskell compiler (страница отсутствует)">HBC</a> | <a href="/w/index.php?title=Helium&amp;action=edit&amp;redlink=1" class="new" title="Helium (страница отсутствует)">Helium</a> | <a href="/w/index.php?title=John%27s_Haskell_Compiler&amp;action=edit&amp;redlink=1" class="new" title="John's Haskell Compiler (страница отсутствует)">JHC</a> | <a href="/wiki/Another_Haskell_Compiler" title="Another Haskell Compiler">NHC</a> | <a href="/w/index.php?title=York_Haskell_Compiler&amp;action=edit&amp;redlink=1" class="new" title="York Haskell Compiler (страница отсутствует)">YHC</a></p> 
+</td> 
+</tr> 
+</table> 
+</div> 
+</div> 
+</center> 
+<table class="navbox collapsible autocollapse nowraplinks" style="margin:auto;"> 
+<tr> 
+<th colspan="2" style="text-align:center;width:100%;"> 
+<div style="float:left; width:6em; text-align:left;"> 
+<div class="noprint plainlinksneverexpand" style="background-color: transparent; padding: 0; font-size:xx-small; color:#000000; white-space: nowrap;"><a href="/wiki/%D0%A8%D0%B0%D0%B1%D0%BB%D0%BE%D0%BD:%D0%AF%D0%B7%D1%8B%D0%BA%D0%B8_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F" title="Шаблон:Языки программирования"><span style="color:#002bb8;" title="Просмотр этого шаблона">п</span></a>·<a href="/wiki/%D0%9E%D0%B1%D1%81%D1%83%D0%B6%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D1%88%D0%B0%D0%B1%D0%BB%D0%BE%D0%BD%D0%B0:%D0%AF%D0%B7%D1%8B%D0%BA%D0%B8_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F" title="Обсуждение шаблона:Языки программирования"><span style="color:#002bb8;" title="Обсуждение этого шаблона">о</span></a>·<a href="http://ru.wikipedia.org/w/index.php?title=%D0%A8%D0%B0%D0%B1%D0%BB%D0%BE%D0%BD:%D0%AF%D0%B7%D1%8B%D0%BA%D0%B8_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F&amp;action=edit" class="external text" rel="nofollow"><span style="color:#002bb8;" title="Вы можете отредактировать этот шаблон. Пожалуйста, используйте клавишу предварительного просмотра перед сохранением">р</span></a></div> 
+</div> 
+<span style="font-size:110%;">Основные <a href="/wiki/%D0%AF%D0%B7%D1%8B%D0%BA_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F" title="Язык программирования">языки программирования</a> <small>(<a href="/wiki/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA_%D1%8F%D0%B7%D1%8B%D0%BA%D0%BE%D0%B2_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F" title="Список языков программирования">список</a>&#160;• <a href="/wiki/%D0%A1%D1%80%D0%B0%D0%B2%D0%BD%D0%B5%D0%BD%D0%B8%D0%B5_%D1%8F%D0%B7%D1%8B%D0%BA%D0%BE%D0%B2_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F" title="Сравнение языков программирования">сравнение</a>&#160;• <a href="/wiki/%D0%A1%D1%80%D0%B0%D0%B2%D0%BD%D0%B5%D0%BD%D0%B8%D0%B5_IDE" title="Сравнение IDE">IDE</a>&#160;• <a href="/wiki/%D0%98%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%8F_%D1%8F%D0%B7%D1%8B%D0%BA%D0%BE%D0%B2_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F" title="История языков программирования">история</a>&#160;• <a href="/wiki/%D0%A5%D1%80%D0%BE%D0%BD%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D1%8F_%D1%8F%D0%B7%D1%8B%D0%BA%D0%BE%D0%B2_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F" title="Хронология языков программирования">хронология</a>)</small></span></th> 
+</tr> 
+<tr> 
+<th style="white-space:nowrap;">Используемые<br /> 
+в разработке</th> 
+<td style="width:100%;"> 
+<div> 
+<p><span style="white-space: nowrap;"><a href="/wiki/%D0%90%D0%B4%D0%B0_(%D1%8F%D0%B7%D1%8B%D0%BA_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F)" title="Ада (язык программирования)">Ада</a> •</span> <span style="white-space: nowrap;"><a href="/wiki/%D0%90%D0%9F%D0%9B_(%D1%8F%D0%B7%D1%8B%D0%BA_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F)" title="АПЛ (язык программирования)">АПЛ</a> •</span> <span style="white-space: nowrap;"><a href="/wiki/%D0%AF%D0%B7%D1%8B%D0%BA_%D0%B0%D1%81%D1%81%D0%B5%D0%BC%D0%B1%D0%BB%D0%B5%D1%80%D0%B0" title="Язык ассемблера">Ассемблер</a> •</span> <span style="white-space: nowrap;"><a href="/wiki/ActionScript" title="ActionScript">ActionScript</a> •</span> <span style="white-space: nowrap;"><a href="/wiki/ABAP/4" title="ABAP/4">ABAP/4</a> •</span> <span style="white-space: nowrap;"><a href="/wiki/AutoIt" title="AutoIt">AutoIt</a> •</span> <span style="white-space: nowrap;"><a href="/wiki/AWK" title="AWK">AWK</a> •</span> <span style="white-space: nowrap;"><a href="/wiki/BASIC" title="BASIC">BASIC</a> •</span> <span style="white-space: nowrap;"><a href="/wiki/%D0%A1%D0%B8_(%D1%8F%D0%B7%D1%8B%D0%BA_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F)" title="Си (язык программирования)">C</a> •</span> <span style="white-space: nowrap;"><a href="/wiki/%D0%9A%D0%BE%D0%B1%D0%BE%D0%BB" title="Кобол">Кобол</a> •</span> <span style="white-space: nowrap;"><a href="/wiki/C%2B%2B" title="C++">C++</a> •</span> <span style="white-space: nowrap;"><a href="/wiki/C_Sharp" title="C Sharp">C#</a> •</span> <span style="white-space: nowrap;"><a href="/wiki/C%CF%89" title="Cω">Cω</a> •</span> <span style="white-space: nowrap;"><a href="/wiki/ColdFusion" title="ColdFusion">ColdFusion</a> •</span> <span style="white-space: nowrap;"><a href="/wiki/Common_Lisp" title="Common Lisp">Common Lisp</a> •</span> <span style="white-space: nowrap;"><a href="/wiki/D_(%D1%8F%D0%B7%D1%8B%D0%BA_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F)" title="D (язык программирования)">D</a> •</span> <span style="white-space: nowrap;"><a href="/w/index.php?title=DBase_(%D1%8F%D0%B7%D1%8B%D0%BA_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F)&amp;action=edit&amp;redlink=1" class="new" title="DBase (язык программирования) (страница отсутствует)">dBase</a> •</span> <span style="white-space: nowrap;"><a href="/wiki/Delphi_(%D1%8F%D0%B7%D1%8B%D0%BA_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F)" title="Delphi (язык программирования)">Delphi</a> •</span> <span style="white-space: nowrap;"><a href="/wiki/Eiffel" title="Eiffel">Eiffel</a> •</span> <span style="white-space: nowrap;"><a href="/wiki/Erlang" title="Erlang">Erlang</a> •</span> <span style="white-space: nowrap;"><a href="/wiki/F_Sharp" title="F Sharp">F#</a> •</span> <span style="white-space: nowrap;"><a href="/wiki/Forth" title="Forth">Forth</a> •</span> <span style="white-space: nowrap;"><a href="/wiki/%D0%A4%D0%BE%D1%80%D1%82%D1%80%D0%B0%D0%BD" title="Фортран">Фортран</a> •</span> <span style="white-space: nowrap;"><a href="/wiki/Gambas" title="Gambas">Gambas</a> •</span> <span style="white-space: nowrap;"><a href="/wiki/Groovy" title="Groovy">Groovy</a> •</span> <span style="white-space: nowrap;"><strong class="selflink">Haskell</strong> •</span> <span style="white-space: nowrap;"><a href="/wiki/Icon_(%D1%8F%D0%B7%D1%8B%D0%BA_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F)" title="Icon (язык программирования)">Icon</a> •</span> <span style="white-space: nowrap;"><a href="/wiki/Java" title="Java">Java</a> •</span> <span style="white-space: nowrap;"><a href="/wiki/JavaScript" title="JavaScript">JavaScript</a> •</span> <span style="white-space: nowrap;"><a href="/wiki/Limbo" title="Limbo">Limbo</a> •</span> <span style="white-space: nowrap;"><a href="/wiki/Lua" title="Lua">Lua</a> •</span> <span style="white-space: nowrap;"><a href="/wiki/MATLAB" title="MATLAB">MATLAB</a> •</span> <span style="white-space: nowrap;"><a href="/wiki/Object_Pascal" title="Object Pascal">Object Pascal</a> •</span> <span style="white-space: nowrap;"><a href="/wiki/Objective-C" title="Objective-C">Objective-C</a> •</span> <span style="white-space: nowrap;"><a href="/wiki/OCaml" title="OCaml">OCaml</a> •</span> <span style="white-space: nowrap;"><a href="/wiki/Oz_(%D1%8F%D0%B7%D1%8B%D0%BA_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F)" title="Oz (язык программирования)">Oz</a> •</span> <span style="white-space: nowrap;"><a href="/wiki/%D0%9E%D0%B1%D0%B5%D1%80%D0%BE%D0%BD_(%D1%8F%D0%B7%D1%8B%D0%BA_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F)" title="Оберон (язык программирования)">Оберон</a> •</span> <span style="white-space: nowrap;"><a href="/wiki/Parser" title="Parser">Parser</a> •</span> <span style="white-space: nowrap;"><a href="/wiki/%D0%9F%D0%B0%D1%81%D0%BA%D0%B0%D0%BB%D1%8C_(%D1%8F%D0%B7%D1%8B%D0%BA_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F)" title="Паскаль (язык программирования)">Паскаль</a> •</span> <span style="white-space: nowrap;"><a href="/wiki/Perl" title="Perl">Perl</a> •</span> <span style="white-space: nowrap;"><a href="/wiki/PHP" title="PHP">PHP</a> •</span> <span style="white-space: nowrap;"><a href="/wiki/PowerBASIC" title="PowerBASIC">PowerBASIC</a> •</span> <span style="white-space: nowrap;"><a href="/wiki/PureBasic" title="PureBasic">PureBasic</a> •</span> <span style="white-space: nowrap;"><a href="/wiki/Python" title="Python">Python</a> •</span> <span style="white-space: nowrap;"><a href="/wiki/%D0%9F%D0%9B/1" title="ПЛ/1">ПЛ/1</a> •</span> <span style="white-space: nowrap;"><a href="/wiki/%D0%9F%D1%80%D0%BE%D0%BB%D0%BE%D0%B3_(%D1%8F%D0%B7%D1%8B%D0%BA_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F)" title="Пролог (язык программирования)">Пролог</a> •</span> <span style="white-space: nowrap;"><a href="/wiki/Ruby" title="Ruby">Ruby</a> •</span> <span style="white-space: nowrap;"><a href="/wiki/Scala_(%D1%8F%D0%B7%D1%8B%D0%BA_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F)" title="Scala (язык программирования)">Scala</a> •</span> <span style="white-space: nowrap;"><a href="/wiki/Scheme" title="Scheme">Scheme</a> •</span> <span style="white-space: nowrap;"><a href="/wiki/Smalltalk" title="Smalltalk">Smalltalk</a> •</span> <span style="white-space: nowrap;"><a href="/wiki/SQL" title="SQL">SQL</a> •</span> <span style="white-space: nowrap;"><a href="/wiki/PL/SQL" title="PL/SQL">PL/SQL</a> •</span> <span style="white-space: nowrap;"><a href="/wiki/Tcl" title="Tcl">Tcl</a> •</span> <span style="white-space: nowrap;"><a href="/wiki/Vala" title="Vala">Vala</a> •</span> <span style="white-space: nowrap;"><a href="/wiki/Visual_Basic" title="Visual Basic">Visual Basic</a> •</span> <span style="white-space: nowrap;"><a href="/wiki/Visual_Basic_.NET" title="Visual Basic .NET">VB.NET</a></span></p> 
+</div> 
+</td> 
+</tr> 
+<tr> 
+<th style="white-space:nowrap;">Академические</th> 
+<td style="width:100%;background:#f0f0f0"> 
+<div style="margin-top:-1ex;margin-bottom:-1ex;padding:0"> 
+<p><span style="white-space: nowrap;"><a href="/wiki/Clean" title="Clean">Clean</a> •</span> <span style="white-space: nowrap;"><a href="/wiki/Curry" title="Curry">Curry</a> •</span> <span style="white-space: nowrap;"><a href="/wiki/%D0%9B%D0%BE%D0%B3%D0%BE_(%D1%8F%D0%B7%D1%8B%D0%BA_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F)" title="Лого (язык программирования)">Лого</a> •</span> <span style="white-space: nowrap;"><a href="/wiki/ML" title="ML">ML</a> •</span> <span style="white-space: nowrap;"><a href="/wiki/%D0%9C%D0%BE%D0%B4%D1%83%D0%BB%D0%B0-3" title="Модула-3">Модула-3</a> •</span> <span style="white-space: nowrap;"><a href="/wiki/%D0%A0%D0%B5%D1%84%D0%B0%D0%BB" title="Рефал" class="mw-redirect">Рефал</a> •</span> <span style="white-space: nowrap;"><a href="/wiki/%D0%A1%D0%B8%D0%BC%D1%83%D0%BB%D0%B0" title="Симула">Симула</a></span></p> 
+</div> 
+</td> 
+</tr> 
+<tr> 
+<th style="white-space:nowrap;"><a href="/wiki/IEC61131-3" title="IEC61131-3" class="mw-redirect">IEC61131-3</a></th> 
+<td style="width:100%;"> 
+<div style="margin-top:-1ex;margin-bottom:-1ex;padding:0"> 
+<p><span style="white-space: nowrap;"><a href="/wiki/Instruction_List" title="Instruction List">Instruction List</a> •</span> <span style="white-space: nowrap;"><a href="/wiki/Structured_Text" title="Structured Text">ST</a> •</span> <span style="white-space: nowrap;"><a href="/wiki/FBD" title="FBD">FBD</a> •</span> <span style="white-space: nowrap;"><a href="/wiki/Ladder_Diagram" title="Ladder Diagram">Ladder Diagram</a> •</span> <span style="white-space: nowrap;"><a href="/wiki/Sequential_Function_Chart" title="Sequential Function Chart">SFC</a></span></p> 
+</div> 
+</td> 
+</tr> 
+<tr> 
+<th style="white-space:nowrap;">Прочие</th> 
+<td style="width:100%;background:#f0f0f0"> 
+<div style="margin-top:-1ex;margin-bottom:-1ex;padding:0"> 
+<p><span style="white-space: nowrap;"><a href="/wiki/%D0%90%D0%BB%D0%B3%D0%BE%D0%BB" title="Алгол">Алгол</a> •</span> <span style="white-space: nowrap;"><a href="/wiki/%D0%90%D0%BB%D0%B3%D0%BE%D0%BB_68" title="Алгол 68">Алгол 68</a> •</span> <span style="white-space: nowrap;"><a href="/wiki/%D0%9C%D0%BE%D0%B4%D1%83%D0%BB%D0%B0-2" title="Модула-2">Модула-2</a> •</span> <span style="white-space: nowrap;"><a href="/wiki/%D0%9C%D0%B8%D1%80%D0%B0%D0%BD%D0%B4%D0%B0_(%D1%8F%D0%B7%D1%8B%D0%BA_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F)" title="Миранда (язык программирования)">Miranda</a> •</span> <span style="white-space: nowrap;"><a href="/wiki/Hope" title="Hope" class="mw-redirect">Hope</a></span></p> 
+</div> 
+</td> 
+</tr> 
+<tr> 
+<th style="white-space:nowrap;"><a href="/wiki/%D0%AD%D0%B7%D0%BE%D1%82%D0%B5%D1%80%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B5_%D1%8F%D0%B7%D1%8B%D0%BA%D0%B8_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F" title="Эзотерические языки программирования">Эзотерические</a></th> 
+<td style="width:100%;"> 
+<div style="margin-top:-1ex;margin-bottom:-1ex;padding:0"> 
+<p><span style="white-space: nowrap;"><a href="/wiki/HQ9%2B" title="HQ9+">HQ9+</a>/HQ9++ •</span> <span style="white-space: nowrap;"><a href="/wiki/INTERCAL" title="INTERCAL">INTERCAL</a> •</span> <span style="white-space: nowrap;"><a href="/wiki/Brainfuck" title="Brainfuck">Brainfuck</a> •</span> <span style="white-space: nowrap;"><a href="/wiki/Befunge" title="Befunge">Befunge</a> •</span> <span style="white-space: nowrap;"><a href="/wiki/Malbolge" title="Malbolge">Malbolge</a> •</span> <span style="white-space: nowrap;"><a href="/wiki/Piet" title="Piet">Piet</a> •</span> <span style="white-space: nowrap;"><a href="/wiki/Spoon" title="Spoon">Spoon</a> •</span> <span style="white-space: nowrap;"><a href="/wiki/Unlambda" title="Unlambda">Unlambda</a> •</span> <span style="white-space: nowrap;"><a href="/wiki/Whitespace" title="Whitespace">Whitespace</a> •</span> <span style="white-space: nowrap;"><a href="/wiki/FALSE" title="FALSE">FALSE</a></span></p> 
+</div> 
+</td> 
+</tr> 
+</table> 
+<table class="metadata plainlinks ambox ambox-style"> 
+<tr> 
+<td class="ambox-image"> 
+<div> 
+<div><a href="/wiki/%D0%92%D0%B8%D0%BA%D0%B8%D0%BF%D0%B5%D0%B4%D0%B8%D1%8F:%D0%9A%D0%B0%D0%BA_%D0%BF%D1%80%D0%B0%D0%B2%D0%B8%D1%82%D1%8C_%D1%81%D1%82%D0%B0%D1%82%D1%8C%D0%B8" title="Улучшение статьи"><img alt="Wiki letter w.svg" src="http://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Wiki_letter_w.svg/40px-Wiki_letter_w.svg.png" width="40" height="40" /></a></div> 
+</div> 
+</td> 
+<td class="ambox-text"><b>Для улучшения этой статьи желательно<sup style="line-height:0;font-weight:bold"><a href="/wiki/%D0%92%D0%B8%D0%BA%D0%B8%D0%BF%D0%B5%D0%B4%D0%B8%D1%8F:Rq" title="Википедия:Rq" class="mw-redirect">?</a></sup>:</b> 
+<div class="ambox-text-small"> 
+<ul> 
+<li>Проставив <a href="/wiki/%D0%92%D0%B8%D0%BA%D0%B8%D0%BF%D0%B5%D0%B4%D0%B8%D1%8F:%D0%A1%D0%BD%D0%BE%D1%81%D0%BA%D0%B8" title="Википедия:Сноски">сноски</a>, внести более точные указания на источники.</li> 
+</ul> 
+</div> 
+</td> 
+<td class="widthhack"></td> 
+</tr> 
+</table> 
+ 
+ 
+<!-- 
+NewPP limit report
+Preprocessor node count: 7569/1000000
+Post-expand include size: 70304/2048000 bytes
+Template argument size: 38657/2048000 bytes
+Expensive parser function count: 1/500
+--> 
+ 
+<!-- Saved in parser cache with key ruwiki:pcache:idhash:13198-0!1!0!!ru!2 and timestamp 20100609061232 --> 
+<div class="printfooter"> 
+Источник — «<a href="http://ru.wikipedia.org/wiki/Haskell">http://ru.wikipedia.org/wiki/Haskell</a>»</div> 
+		<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks"><a href="/wiki/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:Categories" title="Служебная:Categories">Категории</a>: <span dir='ltr'><a href="/wiki/%D0%9A%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F:%D0%9F%D0%BE%D1%8F%D0%B2%D0%B8%D0%BB%D0%B8%D1%81%D1%8C_%D0%B2_1990_%D0%B3%D0%BE%D0%B4%D1%83" title="Категория:Появились в 1990 году">Появились в 1990 году</a></span> | <span dir='ltr'><a href="/wiki/%D0%9A%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F:%D0%AF%D0%B7%D1%8B%D0%BA%D0%B8_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F_%D0%BF%D0%BE_%D0%B0%D0%BB%D1%84%D0%B0%D0%B2%D0%B8%D1%82%D1%83" title="Категория:Языки программирования по алфавиту">Языки программирования по алфавиту</a></span> | <span dir='ltr'><a href="/wiki/%D0%9A%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F:Haskell" title="Категория:Haskell">Haskell</a></span> | <span dir='ltr'><a href="/wiki/%D0%9A%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F:%D0%A4%D1%83%D0%BD%D0%BA%D1%86%D0%B8%D0%BE%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B5_%D1%8F%D0%B7%D1%8B%D0%BA%D0%B8_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F" title="Категория:Функциональные языки программирования">Функциональные языки программирования</a></span></div><div id="mw-hidden-catlinks" class="mw-hidden-cats-hidden">Скрытая категория: <span dir='ltr'><a href="/wiki/%D0%9A%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F:%D0%92%D0%B8%D0%BA%D0%B8%D0%BF%D0%B5%D0%B4%D0%B8%D1%8F:%D0%A1%D1%82%D0%B0%D1%82%D1%8C%D0%B8_%D0%B1%D0%B5%D0%B7_%D1%81%D0%BD%D0%BE%D1%81%D0%BE%D0%BA" title="Категория:Википедия:Статьи без сносок">Википедия:Статьи без сносок</a></span></div></div>		<!-- end content --> 
+				<div class="visualClear"></div> 
+	</div> 
+</div></div> 
+<div id="column-one"> 
+	<div id="p-cactions" class="portlet"> 
+		<h5>Просмотры</h5> 
+		<div class="pBody"> 
+			<ul> 
+				 <li id="ca-nstab-main" class="selected"><a href="/wiki/Haskell" title="Содержание статьи [c]" accesskey="c">Статья</a></li> 
+				 <li id="ca-talk"><a href="/wiki/%D0%9E%D0%B1%D1%81%D1%83%D0%B6%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5:Haskell" title="Обсуждение содержания страницы [t]" accesskey="t">Обсуждение</a></li> 
+				 <li id="ca-edit"><a href="/w/index.php?title=Haskell&amp;action=edit" title="Эту статью можно изменять. Перед сохранением изменений, пожалуйста, нажмите кнопку предварительного просмотра для визуальной проверки результата [e]" accesskey="e">Править</a></li> 
+				 <li id="ca-history"><a href="/w/index.php?title=Haskell&amp;action=history" title="Журнал изменений страницы [h]" accesskey="h">история</a></li> 
+			</ul> 
+		</div> 
+	</div> 
+	<div class="portlet" id="p-personal"> 
+		<h5>Личные инструменты</h5> 
+		<div class="pBody"> 
+			<ul> 
+				<li id="pt-optin-try"><a href="http://ru.wikipedia.org/w/index.php?title=%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:UsabilityInitiativeOptIn&amp;from=Haskell" title="Опробуйте новые возможности" class="no-text-transform">Опробовать бета-версию</a></li> 
+				<li id="pt-login"><a href="/w/index.php?title=%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:UserLogin&amp;returnto=Haskell" title="Здесь можно зарегистрироваться в системе, но это необязательно. [o]" accesskey="o">Представиться / зарегистрироваться</a></li> 
+			</ul> 
+		</div> 
+	</div> 
+	<div class="portlet" id="p-logo"> 
+		<a style="background-image: url(http://upload.wikimedia.org/wikipedia/ru/b/bc/Wiki.png);" href="/wiki/%D0%97%D0%B0%D0%B3%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F_%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0" title="Заглавная страница"></a> 
+	</div> 
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script> 
+	<div class='generated-sidebar portlet' id='p-navigation'> 
+		<h5>Навигация</h5> 
+		<div class='pBody'> 
+			<ul> 
+				<li id="n-mainpage"><a href="/wiki/%D0%97%D0%B0%D0%B3%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F_%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0" title="Перейти на заглавную страницу [z]" accesskey="z">Заглавная страница</a></li> 
+				<li id="n-browse"><a href="/wiki/%D0%92%D0%B8%D0%BA%D0%B8%D0%BF%D0%B5%D0%B4%D0%B8%D1%8F:%D0%9F%D0%BE%D0%B8%D1%81%D0%BA_%D0%BF%D0%BE_%D0%BA%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F%D0%BC" title="Поиск по категориям">Рубрикация</a></li> 
+				<li id="n-index"><a href="/wiki/%D0%92%D0%B8%D0%BA%D0%B8%D0%BF%D0%B5%D0%B4%D0%B8%D1%8F:%D0%90%D0%BB%D1%84%D0%B0%D0%B2%D0%B8%D1%82%D0%BD%D1%8B%D0%B9_%D1%83%D0%BA%D0%B0%D0%B7%D0%B0%D1%82%D0%B5%D0%BB%D1%8C" title="Поиск по двум первым буквам">Указатель А — Я</a></li> 
+				<li id="n-featured"><a href="/wiki/%D0%92%D0%B8%D0%BA%D0%B8%D0%BF%D0%B5%D0%B4%D0%B8%D1%8F:%D0%98%D0%B7%D0%B1%D1%80%D0%B0%D0%BD%D0%BD%D1%8B%D0%B5_%D1%81%D1%82%D0%B0%D1%82%D1%8C%D0%B8" title="Статьи, считающиеся лучшими статьями проекта">Избранные статьи</a></li> 
+				<li id="n-randompage"><a href="/wiki/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:Random" title="Посмотреть случайную страницу [x]" accesskey="x">Случайная статья</a></li> 
+				<li id="n-currentevents"><a href="/wiki/%D0%9F%D0%BE%D1%80%D1%82%D0%B0%D0%BB:%D0%A2%D0%B5%D0%BA%D1%83%D1%89%D0%B8%D0%B5_%D1%81%D0%BE%D0%B1%D1%8B%D1%82%D0%B8%D1%8F" title="Статьи о текущих событиях в мире">Текущие события</a></li> 
+			</ul> 
+		</div> 
+	</div> 
+	<div id="p-search" class="portlet"> 
+		<h5><label for="searchInput">Поиск</label></h5> 
+		<div id="searchBody" class="pBody"> 
+			<form action="/w/index.php" id="searchform"> 
+				<input type='hidden' name="title" value="Служебная:Search"/> 
+				<input id="searchInput" title="Искать это слово" accesskey="f" value="" name="search" /> 
+				<input type='submit' name="go" class="searchButton" id="searchGoButton"	value="Перейти" title="Перейти к странице, имеющей в точности такое название" />&nbsp;
+				<input type='submit' name="fulltext" class="searchButton" id="mw-searchButton" value="Найти" title="Найти страницы, содержащие указанный текст" /> 
+			</form> 
+		</div> 
+	</div> 
+	<div class='generated-sidebar portlet' id='p-participation'> 
+		<h5>Участие</h5> 
+		<div class='pBody'> 
+			<ul> 
+				<li id="n-bug_in_article"><a href="/wiki/%D0%92%D0%B8%D0%BA%D0%B8%D0%BF%D0%B5%D0%B4%D0%B8%D1%8F:%D0%A1%D0%BE%D0%BE%D0%B1%D1%89%D0%B5%D0%BD%D0%B8%D1%8F_%D0%BE%D0%B1_%D0%BE%D1%88%D0%B8%D0%B1%D0%BA%D0%B0%D1%85">Сообщить об ошибке</a></li> 
+				<li id="n-portal"><a href="/wiki/%D0%92%D0%B8%D0%BA%D0%B8%D0%BF%D0%B5%D0%B4%D0%B8%D1%8F:%D0%9F%D0%BE%D1%80%D1%82%D0%B0%D0%BB_%D1%81%D0%BE%D0%BE%D0%B1%D1%89%D0%B5%D1%81%D1%82%D0%B2%D0%B0" title="О проекте, о том, что вы можете сделать, где что находится">Портал сообщества</a></li> 
+				<li id="n-forum"><a href="/wiki/%D0%92%D0%B8%D0%BA%D0%B8%D0%BF%D0%B5%D0%B4%D0%B8%D1%8F:%D0%A4%D0%BE%D1%80%D1%83%D0%BC" title="Форум участников Википедии">Форум</a></li> 
+				<li id="n-recentchanges"><a href="/wiki/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:RecentChanges" title="Список последних изменений [r]" accesskey="r">Свежие правки</a></li> 
+				<li id="n-newpages"><a href="/wiki/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:NewPages" title="Список недавно созданных страниц">Новые страницы</a></li> 
+				<li id="n-help"><a href="/wiki/%D0%92%D0%B8%D0%BA%D0%B8%D0%BF%D0%B5%D0%B4%D0%B8%D1%8F:%D0%A1%D0%BF%D1%80%D0%B0%D0%B2%D0%BA%D0%B0" title="Справочник по проекту «Википедия»">Справка</a></li> 
+				<li id="n-sitesupport"><a href="http://wikimediafoundation.org/wiki/Global_Support/ru" title="Поддержите нас">Пожертвования</a></li> 
+			</ul> 
+		</div> 
+	</div> 
+	<div class='generated-sidebar portlet' id='p-coll-print_export'> 
+		<h5>Печать/экспорт</h5> 
+		<div class='pBody'> 
+<ul id="collectionPortletList"><li id="coll-create_a_book"><a href="/w/index.php?title=%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:Book&amp;bookcmd=book_creator&amp;referer=Haskell" title="Создать книгу или коллекцию статей" rel="nofollow">Создать книгу</a></li><li id="coll-download-as-rl"><a href="/w/index.php?title=%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:Book&amp;bookcmd=render_article&amp;arttitle=Haskell&amp;oldid=24013151&amp;writer=rl" title="Скачать PDF-версию этой вики-страницы" rel="nofollow">Скачать как PDF</a></li><li id="t-print"><a href="/w/index.php?title=Haskell&amp;printable=yes" title="Версия этой страницы для печати [p]" accesskey="p">Версия для печати</a></li></ul>		</div> 
+	</div> 
+	<div class="portlet" id="p-tb"> 
+		<h5>Инструменты</h5> 
+		<div class="pBody"> 
+			<ul> 
+				<li id="t-whatlinkshere"><a href="/wiki/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:WhatLinksHere/Haskell" title="Список всех страниц, которые ссылаются на эту страницу [j]" accesskey="j">Ссылки сюда</a></li> 
+				<li id="t-recentchangeslinked"><a href="/wiki/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:RecentChangesLinked/Haskell" title="Последние изменения в страницах, на которые ссылается эта страница [k]" accesskey="k">Связанные правки</a></li> 
+<li id="t-specialpages"><a href="/wiki/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:SpecialPages" title="Список служебных страниц [q]" accesskey="q">Спецстраницы</a></li> 
+				<li id="t-permalink"><a href="/w/index.php?title=Haskell&amp;oldid=24013151" title="Постоянная ссылка на эту версию страницы">Постоянная ссылка</a></li><li id="t-cite"><a href="/w/index.php?title=%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:Cite&amp;page=Haskell&amp;id=24013151" title="Информация о том, как цитировать эту страницу">Цитировать страницу</a></li>			</ul> 
+		</div> 
+	</div> 
+	<div id="p-lang" class="portlet"> 
+		<h5>На других языках</h5> 
+		<div class="pBody"> 
+			<ul> 
+				<li class="interwiki-bg"><a href="http://bg.wikipedia.org/wiki/Haskell">Български</a></li> 
+				<li class="interwiki-ca"><a href="http://ca.wikipedia.org/wiki/Haskell">Català</a></li> 
+				<li class="interwiki-cs"><a href="http://cs.wikipedia.org/wiki/Haskell">Česky</a></li> 
+				<li class="interwiki-de"><a href="http://de.wikipedia.org/wiki/Haskell_(Programmiersprache)">Deutsch</a></li> 
+				<li class="interwiki-el"><a href="http://el.wikipedia.org/wiki/Haskell">Ελληνικά</a></li> 
+				<li class="interwiki-en"><a href="http://en.wikipedia.org/wiki/Haskell_(programming_language)">English</a></li> 
+				<li class="interwiki-eo"><a href="http://eo.wikipedia.org/wiki/Haskell">Esperanto</a></li> 
+				<li class="interwiki-es"><a href="http://es.wikipedia.org/wiki/Haskell">Español</a></li> 
+				<li class="interwiki-et"><a href="http://et.wikipedia.org/wiki/Haskell">Eesti</a></li> 
+				<li class="interwiki-fa"><a href="http://fa.wikipedia.org/wiki/%D9%87%D8%B3%DA%A9%D9%84_(%D8%B2%D8%A8%D8%A7%D9%86_%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%E2%80%8C%D9%86%D9%88%DB%8C%D8%B3%DB%8C)">فارسی</a></li> 
+				<li class="interwiki-fi"><a href="http://fi.wikipedia.org/wiki/Haskell">Suomi</a></li> 
+				<li class="interwiki-fr"><a href="http://fr.wikipedia.org/wiki/Haskell">Français</a></li> 
+				<li class="interwiki-gl"><a href="http://gl.wikipedia.org/wiki/Haskell">Galego</a></li> 
+				<li class="interwiki-he"><a href="http://he.wikipedia.org/wiki/Haskell">עברית</a></li> 
+				<li class="interwiki-hr"><a href="http://hr.wikipedia.org/wiki/Haskell_(programski_jezik)">Hrvatski</a></li> 
+				<li class="interwiki-hu"><a href="http://hu.wikipedia.org/wiki/Haskell">Magyar</a></li> 
+				<li class="interwiki-it"><a href="http://it.wikipedia.org/wiki/Haskell">Italiano</a></li> 
+				<li class="interwiki-ja"><a href="http://ja.wikipedia.org/wiki/Haskell">日本語</a></li> 
+				<li class="interwiki-ko"><a href="http://ko.wikipedia.org/wiki/%ED%95%98%EC%8A%A4%EC%BC%88">한국어</a></li> 
+				<li class="interwiki-la"><a href="http://la.wikipedia.org/wiki/Haskell">Latina</a></li> 
+				<li class="interwiki-lv"><a href="http://lv.wikipedia.org/wiki/Haskell">Latviešu</a></li> 
+				<li class="interwiki-ms"><a href="http://ms.wikipedia.org/wiki/Haskell">Bahasa Melayu</a></li> 
+				<li class="interwiki-nl"><a href="http://nl.wikipedia.org/wiki/Haskell">Nederlands</a></li> 
+				<li class="interwiki-pl"><a href="http://pl.wikipedia.org/wiki/Haskell">Polski</a></li> 
+				<li class="interwiki-pt"><a href="http://pt.wikipedia.org/wiki/Haskell_(linguagem_de_programa%C3%A7%C3%A3o)">Português</a></li> 
+				<li class="interwiki-ro"><a href="http://ro.wikipedia.org/wiki/Haskell">Română</a></li> 
+				<li class="interwiki-sk"><a href="http://sk.wikipedia.org/wiki/Haskell_(programovac%C3%AD_jazyk)">Slovenčina</a></li> 
+				<li class="interwiki-sl"><a href="http://sl.wikipedia.org/wiki/Haskell">Slovenščina</a></li> 
+				<li class="interwiki-sv"><a href="http://sv.wikipedia.org/wiki/Haskell">Svenska</a></li> 
+				<li class="interwiki-tr"><a href="http://tr.wikipedia.org/wiki/Haskell">Türkçe</a></li> 
+				<li class="interwiki-uk"><a href="http://uk.wikipedia.org/wiki/Haskell">Українська</a></li> 
+				<li class="interwiki-zh"><a href="http://zh.wikipedia.org/wiki/Haskell">中文</a></li> 
+			</ul> 
+		</div> 
+	</div> 
+</div><!-- end of the left (by default at least) column --> 
+<div class="visualClear"></div> 
+<div id="footer"> 
+	<div id="f-poweredbyico"><a href="http://www.mediawiki.org/"><img src="http://bits.wikimedia.org/skins-1.5/common/images/poweredby_mediawiki_88x31.png" height="31" width="88" alt="Powered by MediaWiki" /></a></div> 
+	<div id="f-copyrightico"><a href="http://wikimediafoundation.org/"><img src="/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a></div> 
+	<ul id="f-list"> 
+		<li id="lastmod"> Последнее изменение этой страницы: 13:24, 23 апреля 2010.</li> 
+		<li id="copyright">Текст доступен на условиях лицензии <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution/Share-Alike</a>, в отдельных случаях могут действовать дополнительные условия. Подробнее см. <a href="http://wikimediafoundation.org/wiki/Terms_of_Use/ru">Условия использования</a>.</li> 
+		<li id="privacy"><a href="http://wikimediafoundation.org/wiki/%D0%9F%D0%BE%D0%BB%D0%B8%D1%82%D0%B8%D0%BA%D0%B0_%D0%BA%D0%BE%D0%BD%D1%84%D0%B8%D0%B4%D0%B5%D0%BD%D1%86%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D0%B8" title="wikimedia:Политика конфиденциальности">Политика конфиденциальности</a></li> 
+		<li id="about"><a href="/wiki/%D0%92%D0%B8%D0%BA%D0%B8%D0%BF%D0%B5%D0%B4%D0%B8%D1%8F:%D0%9E%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5" title="Википедия:Описание">Описание Википедии</a></li> 
+		<li id="disclaimer"><a href="/wiki/%D0%92%D0%B8%D0%BA%D0%B8%D0%BF%D0%B5%D0%B4%D0%B8%D1%8F:%D0%9E%D1%82%D0%BA%D0%B0%D0%B7_%D0%BE%D1%82_%D0%BE%D1%82%D0%B2%D0%B5%D1%82%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D0%BE%D1%81%D1%82%D0%B8" title="Википедия:Отказ от ответственности">Отказ от ответственности</a></li> 
+	</ul> 
+</div> 
+</div> 
+ 
+<script type="text/javascript">if (window.runOnloadHook) runOnloadHook();</script> 
+<!-- Served by srv241 in 0.094 secs. --></body></html> 

@@ -1,0 +1,9 @@
+300.html - test html file
+300.txt - convertation result
+
+in mzscheme:
+
+> (require "html2txt.ss")
+> (convert "300.html" "300.txt")
+
+file 300.txt would be replaced
